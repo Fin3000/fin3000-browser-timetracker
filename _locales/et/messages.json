@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Ühenda ajaarvestus"
+  },
+  "connectBody": {
+    "message": "Käivita ja peata aeg brauseris ning määra see klientidele ja projektidele."
+  },
+  "verifiedNotice": {
+    "message": "Ametlik Fin3000 laiendus saadab valitud elemendi teksti kirjeldusena. See loeb ainult sinu taimerit ning lubatud kliente ja projekte."
+  },
+  "scope": {
+    "message": "Oma aja lugemine, käivitamine, muutmine, peatamine ja tühistamine"
+  },
+  "permissionDenied": {
+    "message": "Sul puudub vajalik ajaarvestuse õigus."
+  },
+  "running": {
+    "message": "Taimer töötab"
+  },
+  "idle": {
+    "message": "Ükski taimer ei tööta"
+  },
+  "manualCapture": {
+    "message": "Seda elementi ei saa üle võtta. Sisesta kirjeldus käsitsi."
+  },
+  "dirtyStop": {
+    "message": "Peatamine salvestab varem salvestatud väärtused. Salvestamata muudatused jäävad mustandiks."
+  },
+  "taskCleared": {
+    "message": "Projekti muutmine eemaldab eelmise ülesande."
+  },
+  "recoveryTitle": {
+    "message": "Salvestamata mustand"
+  },
+  "discardConfirm": {
+    "message": "Kas tühistada see taimer? Ajakannet ei looda."
+  },
+  "confirmed": {
+    "message": "Taimeri toiming kinnitatud."
+  },
+  "conflict": {
+    "message": "Taimer on vahepeal muutunud. Värskenda ja kontrolli praegust olekut."
+  },
+  "expiredAction": {
+    "message": "Toiming aegus. Kontrolli taimerit enne uue toimingu alustamist."
+  },
+  "longTimer": {
+    "message": "Salvestatud on üle 24 tunni. Kontrolli kannet Fin3000-s."
+  },
+  "updateRequired": {
+    "message": "Enne jätkamist uuenda laiendust."
+  },
+  "storageError": {
+    "message": "Kohalik salvestusruum pole saadaval. Ava laiendus uuesti."
+  },
+  "rateLimited": {
+    "message": "Oota ja värskenda olekut hiljem."
+  },
+  "connectAgain": {
+    "message": "Ühenda laiendus uuesti. Töötav taimer töötab edasi."
+  },
+  "captureReady": {
+    "message": "Valitud tekst on valmis. Kontrolli isikut ja käivita teadlikult."
+  },
+  "disconnected": {
+    "message": "Ühendus katkestatud. Töötav taimer töötab edasi."
+  },
+  "stale": {
+    "message": "Olek pole veel kinnitatud"
+  },
+  "synced": {
+    "message": "Värskendatud"
+  },
+  "timeTracking": {
+    "message": "Tööaja arvestus"
+  },
+  "description": {
+    "message": "Kirjeldus"
+  },
+  "descriptionPlaceholder": {
+    "message": "Millega töötad?"
+  },
+  "noProject": {
+    "message": "Projektita"
+  },
+  "untitled": {
+    "message": "Kirjelduseta"
+  },
+  "start": {
+    "message": "Käivita taimer"
+  },
+  "stop": {
+    "message": "Peata taimer"
+  },
+  "save": {
+    "message": "Salvesta"
+  },
+  "discard": {
+    "message": "Loobu taimerist"
+  },
+  "client": {
+    "message": "Klient · Filter"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Ülesanne"
+  },
+  "billable": {
+    "message": "Arveldatav"
+  },
+  "searchClients": {
+    "message": "Otsi klienti…"
+  },
+  "searchProjects": {
+    "message": "Otsi..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Järgmine"
+  },
+  "refresh": {
+    "message": "Värskenda"
+  },
+  "dropDraft": {
+    "message": "Kustuta"
+  },
+  "archived": {
+    "message": "Mitteaktiivne"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Ühenda Fin3000-ga"
+  },
+  "disconnect": {
+    "message": "Katkesta ühendus"
+  },
+  "connecting": {
+    "message": "Fin3000 ühenduse avamine …"
+  },
+  "connectionCancelled": {
+    "message": "Ühendamine katkestati."
+  },
+  "checking": {
+    "message": "Vastuvõttu kontrollitakse. Ära saada uuesti."
+  },
+  "busy": {
+    "message": "Palun oota …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Käivita ja peata aeg brauseris ning määra see klientidele ja projektidele."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Käivita taimer"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Juurdepääs keelatud"
+  },
+  "configuration": {
+    "message": "Enne jätkamist uuenda laiendust."
+  },
+  "serverError": {
+    "message": "Tekkis ootamatu viga"
+  },
+  "invalidInput": {
+    "message": "Kehtetu väärtus"
+  },
+  "refreshFirst": {
+    "message": "Olek pole veel kinnitatud"
+  },
+  "connectForCapture": {
+    "message": "Ühenda ajaarvestus"
+  },
+  "stopQueued": {
+    "message": "Peata taimer · Palun oota …"
+  },
+  "noResults": {
+    "message": "Tulemusi pole"
+  },
+  "loading": {
+    "message": "Laadib..."
+  },
+  "clearSelection": {
+    "message": "Tühista valik"
+  }
+}

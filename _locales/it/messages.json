@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Collega il monitoraggio del tempo"
+  },
+  "connectBody": {
+    "message": "Avvia e ferma il tempo nel browser e assegnalo a clienti e progetti."
+  },
+  "verifiedNotice": {
+    "message": "L’estensione ufficiale Fin3000 invia come descrizione il testo dell’elemento scelto. Legge solo il tuo timer e i clienti e progetti consentiti."
+  },
+  "scope": {
+    "message": "Leggere, avviare, modificare, fermare e scartare il proprio tempo"
+  },
+  "permissionDenied": {
+    "message": "Non hai l’autorizzazione necessaria per il monitoraggio del tempo."
+  },
+  "running": {
+    "message": "Timer in esecuzione"
+  },
+  "idle": {
+    "message": "Nessun timer in esecuzione"
+  },
+  "manualCapture": {
+    "message": "Impossibile acquisire questo elemento. Inserisci la descrizione manualmente."
+  },
+  "dirtyStop": {
+    "message": "Ferma registra i valori salvati. Le modifiche non salvate restano in bozza."
+  },
+  "taskCleared": {
+    "message": "Cambiare progetto rimuove l’attività precedente."
+  },
+  "recoveryTitle": {
+    "message": "Bozza non salvata"
+  },
+  "discardConfirm": {
+    "message": "Scartare questo timer? Non verrà creata alcuna registrazione del tempo."
+  },
+  "confirmed": {
+    "message": "Azione del timer confermata."
+  },
+  "conflict": {
+    "message": "Il timer è cambiato. Aggiorna e controlla lo stato attuale."
+  },
+  "expiredAction": {
+    "message": "L’azione è scaduta. Controlla il timer prima di avviare una nuova azione."
+  },
+  "longTimer": {
+    "message": "Registrate più di 24 ore. Controlla la voce in Fin3000."
+  },
+  "updateRequired": {
+    "message": "Aggiorna l’estensione prima di continuare."
+  },
+  "storageError": {
+    "message": "La memoria locale non è disponibile. Riapri l’estensione."
+  },
+  "rateLimited": {
+    "message": "Attendi e aggiorna lo stato più tardi."
+  },
+  "connectAgain": {
+    "message": "Ricollega l’estensione. Un timer attivo continua a funzionare."
+  },
+  "captureReady": {
+    "message": "Il testo selezionato è pronto. Controlla la persona e avvia esplicitamente."
+  },
+  "disconnected": {
+    "message": "Disconnesso. Un timer attivo continua a funzionare."
+  },
+  "stale": {
+    "message": "Stato non ancora confermato"
+  },
+  "synced": {
+    "message": "Aggiornato"
+  },
+  "timeTracking": {
+    "message": "Rilevazione delle ore"
+  },
+  "description": {
+    "message": "Descrizione"
+  },
+  "descriptionPlaceholder": {
+    "message": "A cosa stai lavorando?"
+  },
+  "noProject": {
+    "message": "Senza progetto"
+  },
+  "untitled": {
+    "message": "Senza descrizione"
+  },
+  "start": {
+    "message": "Avvia timer"
+  },
+  "stop": {
+    "message": "Ferma timer"
+  },
+  "save": {
+    "message": "Salva"
+  },
+  "discard": {
+    "message": "Scarta timer"
+  },
+  "client": {
+    "message": "Cliente · Filtro"
+  },
+  "project": {
+    "message": "Progetto"
+  },
+  "task": {
+    "message": "Attività"
+  },
+  "billable": {
+    "message": "Fatturabile"
+  },
+  "searchClients": {
+    "message": "Cerca cliente…"
+  },
+  "searchProjects": {
+    "message": "Cerca..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Successiva"
+  },
+  "refresh": {
+    "message": "Aggiorna"
+  },
+  "dropDraft": {
+    "message": "Elimina"
+  },
+  "archived": {
+    "message": "Inattivo"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Collega a Fin3000"
+  },
+  "disconnect": {
+    "message": "Disconnetti"
+  },
+  "connecting": {
+    "message": "Apertura del collegamento a Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Il collegamento è stato annullato."
+  },
+  "checking": {
+    "message": "La ricezione è in fase di verifica. Non inviare di nuovo."
+  },
+  "busy": {
+    "message": "Attendi …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Avvia e ferma il tempo nel browser e assegnalo a clienti e progetti."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Avvia timer"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Accesso negato"
+  },
+  "configuration": {
+    "message": "Aggiorna l’estensione prima di continuare."
+  },
+  "serverError": {
+    "message": "Si è verificato un errore imprevisto"
+  },
+  "invalidInput": {
+    "message": "Valore non valido"
+  },
+  "refreshFirst": {
+    "message": "Stato non ancora confermato"
+  },
+  "connectForCapture": {
+    "message": "Collega il monitoraggio del tempo"
+  },
+  "stopQueued": {
+    "message": "Ferma timer · Attendi …"
+  },
+  "noResults": {
+    "message": "Nessun risultato"
+  },
+  "loading": {
+    "message": "Caricamento..."
+  },
+  "clearSelection": {
+    "message": "Annulla selezione"
+  }
+}

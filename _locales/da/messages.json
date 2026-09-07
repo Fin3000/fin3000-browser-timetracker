@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Forbind tidsregistrering"
+  },
+  "connectBody": {
+    "message": "Start og stop din tid i browseren, og knyt den til kunder og projekter."
+  },
+  "verifiedNotice": {
+    "message": "Den officielle Fin3000-udvidelse sender teksten fra det valgte element som beskrivelse. Den læser kun din timer og tilladte kunder og projekter."
+  },
+  "scope": {
+    "message": "Læs, start, rediger, stop og kassér din egen tid"
+  },
+  "permissionDenied": {
+    "message": "Du mangler den nødvendige tilladelse til tidsregistrering."
+  },
+  "running": {
+    "message": "Timeren kører"
+  },
+  "idle": {
+    "message": "Ingen timer kører"
+  },
+  "manualCapture": {
+    "message": "Elementet kan ikke hentes. Indtast beskrivelsen manuelt."
+  },
+  "dirtyStop": {
+    "message": "Stop registrerer de gemte værdier. Ikke-gemte ændringer bevares som kladde."
+  },
+  "taskCleared": {
+    "message": "Når projektet ændres, fjernes den tidligere opgave."
+  },
+  "recoveryTitle": {
+    "message": "Ikke-gemt kladde"
+  },
+  "discardConfirm": {
+    "message": "Kassér denne timer? Der oprettes ingen tidsregistrering."
+  },
+  "confirmed": {
+    "message": "Timerhandling bekræftet."
+  },
+  "conflict": {
+    "message": "Timeren er blevet ændret. Opdater, og kontrollér den aktuelle status."
+  },
+  "expiredAction": {
+    "message": "Handlingen er udløbet. Kontrollér timeren, før du starter en ny handling."
+  },
+  "longTimer": {
+    "message": "Mere end 24 timer registreret. Kontrollér posten i Fin3000."
+  },
+  "updateRequired": {
+    "message": "Opdater udvidelsen, før du fortsætter."
+  },
+  "storageError": {
+    "message": "Lokal lagring er ikke tilgængelig. Åbn udvidelsen igen."
+  },
+  "rateLimited": {
+    "message": "Vent, og opdater status senere."
+  },
+  "connectAgain": {
+    "message": "Forbind udvidelsen igen. En aktiv timer fortsætter med at køre."
+  },
+  "captureReady": {
+    "message": "Den valgte tekst er klar. Kontrollér personen, og start bevidst."
+  },
+  "disconnected": {
+    "message": "Forbindelsen er afbrudt. En aktiv timer fortsætter med at køre."
+  },
+  "stale": {
+    "message": "Status endnu ikke bekræftet"
+  },
+  "synced": {
+    "message": "Opdateret"
+  },
+  "timeTracking": {
+    "message": "Tidsregistrering"
+  },
+  "description": {
+    "message": "Beskrivelse"
+  },
+  "descriptionPlaceholder": {
+    "message": "Hvad arbejder du på?"
+  },
+  "noProject": {
+    "message": "Uden projekt"
+  },
+  "untitled": {
+    "message": "Uden beskrivelse"
+  },
+  "start": {
+    "message": "Start timer"
+  },
+  "stop": {
+    "message": "Stop timer"
+  },
+  "save": {
+    "message": "Gem"
+  },
+  "discard": {
+    "message": "Kasser timer"
+  },
+  "client": {
+    "message": "Kunde · Filter"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Opgave"
+  },
+  "billable": {
+    "message": "Fakturerbar"
+  },
+  "searchClients": {
+    "message": "Søg kunde…"
+  },
+  "searchProjects": {
+    "message": "Søg..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Næste"
+  },
+  "refresh": {
+    "message": "Opdater"
+  },
+  "dropDraft": {
+    "message": "Slet"
+  },
+  "archived": {
+    "message": "Inaktiv"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Forbind til Fin3000"
+  },
+  "disconnect": {
+    "message": "Afbryd forbindelsen"
+  },
+  "connecting": {
+    "message": "Åbner forbindelsen til Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Forbindelsen blev annulleret."
+  },
+  "checking": {
+    "message": "Modtagelsen kontrolleres. Send ikke igen."
+  },
+  "busy": {
+    "message": "Vent venligst …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Start og stop din tid i browseren, og knyt den til kunder og projekter."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Start timer"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Adgang nægtet"
+  },
+  "configuration": {
+    "message": "Opdater udvidelsen, før du fortsætter."
+  },
+  "serverError": {
+    "message": "Der opstod en uventet fejl"
+  },
+  "invalidInput": {
+    "message": "Ugyldig værdi"
+  },
+  "refreshFirst": {
+    "message": "Status endnu ikke bekræftet"
+  },
+  "connectForCapture": {
+    "message": "Forbind tidsregistrering"
+  },
+  "stopQueued": {
+    "message": "Stop timer · Vent venligst …"
+  },
+  "noResults": {
+    "message": "Ingen resultater"
+  },
+  "loading": {
+    "message": "Indlæser..."
+  },
+  "clearSelection": {
+    "message": "Ophæv valg"
+  }
+}

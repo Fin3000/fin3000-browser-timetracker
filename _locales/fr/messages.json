@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Connecter le suivi du temps"
+  },
+  "connectBody": {
+    "message": "Démarrez et arrêtez votre temps dans le navigateur et associez-le à des clients et projets."
+  },
+  "verifiedNotice": {
+    "message": "L’extension officielle Fin3000 transmet le texte de l’élément choisi comme description. Elle lit uniquement votre minuteur et les clients et projets autorisés."
+  },
+  "scope": {
+    "message": "Lire, démarrer, modifier, arrêter et abandonner votre propre temps"
+  },
+  "permissionDenied": {
+    "message": "Vous n’avez pas l’autorisation requise pour le suivi du temps."
+  },
+  "running": {
+    "message": "Minuteur en cours"
+  },
+  "idle": {
+    "message": "Aucun minuteur en cours"
+  },
+  "manualCapture": {
+    "message": "Cet élément ne peut pas être repris. Saisissez la description manuellement."
+  },
+  "dirtyStop": {
+    "message": "Arrêter enregistre les valeurs sauvegardées. Les modifications non enregistrées restent en brouillon."
+  },
+  "taskCleared": {
+    "message": "Changer de projet retire la tâche précédente."
+  },
+  "recoveryTitle": {
+    "message": "Brouillon non enregistré"
+  },
+  "discardConfirm": {
+    "message": "Abandonner ce minuteur ? Aucune saisie de temps ne sera créée."
+  },
+  "confirmed": {
+    "message": "Action du minuteur confirmée."
+  },
+  "conflict": {
+    "message": "Le minuteur a changé. Actualisez et vérifiez son état actuel."
+  },
+  "expiredAction": {
+    "message": "Cette action a expiré. Vérifiez le minuteur avant une nouvelle action."
+  },
+  "longTimer": {
+    "message": "Plus de 24 heures enregistrées. Vérifiez la saisie dans Fin3000."
+  },
+  "updateRequired": {
+    "message": "Mettez l’extension à jour avant de continuer."
+  },
+  "storageError": {
+    "message": "Le stockage local est indisponible. Rouvrez l’extension."
+  },
+  "rateLimited": {
+    "message": "Patientez et actualisez l’état plus tard."
+  },
+  "connectAgain": {
+    "message": "Reconnectez l’extension. Un minuteur actif continue de tourner."
+  },
+  "captureReady": {
+    "message": "Le texte sélectionné est prêt. Vérifiez la personne et démarrez explicitement."
+  },
+  "disconnected": {
+    "message": "Connexion fermée. Un minuteur actif continue de tourner."
+  },
+  "stale": {
+    "message": "État pas encore confirmé"
+  },
+  "synced": {
+    "message": "Actualisé"
+  },
+  "timeTracking": {
+    "message": "Suivi du temps"
+  },
+  "description": {
+    "message": "Description"
+  },
+  "descriptionPlaceholder": {
+    "message": "Sur quoi travaillez-vous ?"
+  },
+  "noProject": {
+    "message": "Sans projet"
+  },
+  "untitled": {
+    "message": "Sans description"
+  },
+  "start": {
+    "message": "Démarrer le minuteur"
+  },
+  "stop": {
+    "message": "Arrêter le minuteur"
+  },
+  "save": {
+    "message": "Enregistrer"
+  },
+  "discard": {
+    "message": "Abandonner le minuteur"
+  },
+  "client": {
+    "message": "Client · Filtre"
+  },
+  "project": {
+    "message": "Projet"
+  },
+  "task": {
+    "message": "Tâche"
+  },
+  "billable": {
+    "message": "Facturable"
+  },
+  "searchClients": {
+    "message": "Rechercher un client…"
+  },
+  "searchProjects": {
+    "message": "Rechercher..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Suivante"
+  },
+  "refresh": {
+    "message": "Actualiser"
+  },
+  "dropDraft": {
+    "message": "Supprimer"
+  },
+  "archived": {
+    "message": "Inactif"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Se connecter à Fin3000"
+  },
+  "disconnect": {
+    "message": "Se déconnecter"
+  },
+  "connecting": {
+    "message": "Ouverture de la connexion Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "La connexion a été annulée."
+  },
+  "checking": {
+    "message": "La réception est en cours de vérification. Ne renvoyez pas le document."
+  },
+  "busy": {
+    "message": "Veuillez patienter …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Démarrez et arrêtez votre temps dans le navigateur et associez-le à des clients et projets."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Démarrer le minuteur"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Accès refusé"
+  },
+  "configuration": {
+    "message": "Mettez l’extension à jour avant de continuer."
+  },
+  "serverError": {
+    "message": "Une erreur inattendue s'est produite"
+  },
+  "invalidInput": {
+    "message": "Valeur invalide"
+  },
+  "refreshFirst": {
+    "message": "État pas encore confirmé"
+  },
+  "connectForCapture": {
+    "message": "Connecter le suivi du temps"
+  },
+  "stopQueued": {
+    "message": "Arrêter le minuteur · Veuillez patienter …"
+  },
+  "noResults": {
+    "message": "Aucun résultat"
+  },
+  "loading": {
+    "message": "Chargement..."
+  },
+  "clearSelection": {
+    "message": "Annuler la sélection"
+  }
+}

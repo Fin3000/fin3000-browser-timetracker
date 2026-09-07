@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Připojit sledování času"
+  },
+  "connectBody": {
+    "message": "Spouštějte a zastavujte čas v prohlížeči a přiřazujte jej klientům a projektům."
+  },
+  "verifiedNotice": {
+    "message": "Oficiální rozšíření Fin3000 odesílá text zvoleného prvku jako popis. Čte pouze váš časovač a povolené klienty a projekty."
+  },
+  "scope": {
+    "message": "Číst, spouštět, upravovat, zastavovat a zahazovat vlastní čas"
+  },
+  "permissionDenied": {
+    "message": "Nemáte potřebné oprávnění ke sledování času."
+  },
+  "running": {
+    "message": "Časovač běží"
+  },
+  "idle": {
+    "message": "Žádný časovač neběží"
+  },
+  "manualCapture": {
+    "message": "Tento prvek nelze převzít. Zadejte popis ručně."
+  },
+  "dirtyStop": {
+    "message": "Zastavení zapíše uložené hodnoty. Neuložené změny zůstanou jako koncept."
+  },
+  "taskCleared": {
+    "message": "Změna projektu odstraní předchozí úkol."
+  },
+  "recoveryTitle": {
+    "message": "Neuložený koncept"
+  },
+  "discardConfirm": {
+    "message": "Zahodit tento časovač? Záznam času nebude vytvořen."
+  },
+  "confirmed": {
+    "message": "Akce časovače potvrzena."
+  },
+  "conflict": {
+    "message": "Časovač se mezitím změnil. Obnovte a zkontrolujte aktuální stav."
+  },
+  "expiredAction": {
+    "message": "Akce vypršela. Před novou akcí zkontrolujte časovač."
+  },
+  "longTimer": {
+    "message": "Zaznamenáno více než 24 hodin. Zkontrolujte záznam ve Fin3000."
+  },
+  "updateRequired": {
+    "message": "Před pokračováním aktualizujte rozšíření."
+  },
+  "storageError": {
+    "message": "Místní úložiště není dostupné. Otevřete rozšíření znovu."
+  },
+  "rateLimited": {
+    "message": "Počkejte a obnovte stav později."
+  },
+  "connectAgain": {
+    "message": "Připojte rozšíření znovu. Běžící časovač běží dál."
+  },
+  "captureReady": {
+    "message": "Vybraný text je připraven. Zkontrolujte osobu a výslovně spusťte časovač."
+  },
+  "disconnected": {
+    "message": "Odpojeno. Běžící časovač běží dál."
+  },
+  "stale": {
+    "message": "Stav zatím nepotvrzen"
+  },
+  "synced": {
+    "message": "Aktualizováno"
+  },
+  "timeTracking": {
+    "message": "Evidence času"
+  },
+  "description": {
+    "message": "Popis"
+  },
+  "descriptionPlaceholder": {
+    "message": "Na čem pracuješ?"
+  },
+  "noProject": {
+    "message": "Bez projektu"
+  },
+  "untitled": {
+    "message": "Bez popisu"
+  },
+  "start": {
+    "message": "Spustit časovač"
+  },
+  "stop": {
+    "message": "Zastavit časovač"
+  },
+  "save": {
+    "message": "Uložit"
+  },
+  "discard": {
+    "message": "Zahodit časovač"
+  },
+  "client": {
+    "message": "Zákazník · Filtr"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Úkol"
+  },
+  "billable": {
+    "message": "Účtovatelné"
+  },
+  "searchClients": {
+    "message": "Hledat zákazníka…"
+  },
+  "searchProjects": {
+    "message": "Hledat..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Další"
+  },
+  "refresh": {
+    "message": "Aktualizovat"
+  },
+  "dropDraft": {
+    "message": "Smazat"
+  },
+  "archived": {
+    "message": "Neaktivní"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Připojit k Fin3000"
+  },
+  "disconnect": {
+    "message": "Odpojit"
+  },
+  "connecting": {
+    "message": "Otevírá se připojení k Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Připojení bylo zrušeno."
+  },
+  "checking": {
+    "message": "Přijetí se ověřuje. Neodesílejte dokument znovu."
+  },
+  "busy": {
+    "message": "Čekejte prosím …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Spouštějte a zastavujte čas v prohlížeči a přiřazujte jej klientům a projektům."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Spustit časovač"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Přístup odepřen"
+  },
+  "configuration": {
+    "message": "Před pokračováním aktualizujte rozšíření."
+  },
+  "serverError": {
+    "message": "Došlo k neočekávané chybě"
+  },
+  "invalidInput": {
+    "message": "Neplatná hodnota"
+  },
+  "refreshFirst": {
+    "message": "Stav zatím nepotvrzen"
+  },
+  "connectForCapture": {
+    "message": "Připojit sledování času"
+  },
+  "stopQueued": {
+    "message": "Zastavit časovač · Čekejte prosím …"
+  },
+  "noResults": {
+    "message": "Žádné výsledky"
+  },
+  "loading": {
+    "message": "Načítá se..."
+  },
+  "clearSelection": {
+    "message": "Zrušit výběr"
+  }
+}

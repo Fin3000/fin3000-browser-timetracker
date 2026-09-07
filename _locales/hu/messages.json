@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Időkövetés csatlakoztatása"
+  },
+  "connectBody": {
+    "message": "Indítsd és állítsd le az időmérést a böngészőben, és rendeld ügyfelekhez és projektekhez."
+  },
+  "verifiedNotice": {
+    "message": "A hivatalos Fin3000-bővítmény a kiválasztott elem szövegét küldi el leírásként. Csak a saját időmérődet és az engedélyezett ügyfeleket és projekteket olvassa."
+  },
+  "scope": {
+    "message": "Saját idő olvasása, indítása, szerkesztése, leállítása és elvetése"
+  },
+  "permissionDenied": {
+    "message": "Nincs meg az időkövetéshez szükséges jogosultságod."
+  },
+  "running": {
+    "message": "Az időmérő fut"
+  },
+  "idle": {
+    "message": "Nem fut időmérő"
+  },
+  "manualCapture": {
+    "message": "Ez az elem nem vehető át. Add meg kézzel a leírást."
+  },
+  "dirtyStop": {
+    "message": "A leállítás a mentett értékeket rögzíti. A nem mentett módosítások piszkozatként megmaradnak."
+  },
+  "taskCleared": {
+    "message": "A projektváltás eltávolítja a korábbi feladatot."
+  },
+  "recoveryTitle": {
+    "message": "Nem mentett piszkozat"
+  },
+  "discardConfirm": {
+    "message": "Elveted ezt az időmérőt? Nem jön létre időbejegyzés."
+  },
+  "confirmed": {
+    "message": "Az időmérő művelete megerősítve."
+  },
+  "conflict": {
+    "message": "Az időmérő közben megváltozott. Frissíts, és ellenőrizd az állapotát."
+  },
+  "expiredAction": {
+    "message": "A művelet lejárt. Új művelet előtt ellenőrizd az időmérőt."
+  },
+  "longTimer": {
+    "message": "Több mint 24 óra lett rögzítve. Ellenőrizd a bejegyzést a Fin3000-ben."
+  },
+  "updateRequired": {
+    "message": "A folytatás előtt frissítsd a bővítményt."
+  },
+  "storageError": {
+    "message": "A helyi tárhely nem érhető el. Nyisd meg újra a bővítményt."
+  },
+  "rateLimited": {
+    "message": "Várj, és frissítsd később az állapotot."
+  },
+  "connectAgain": {
+    "message": "Csatlakoztasd újra a bővítményt. A futó időmérő tovább fut."
+  },
+  "captureReady": {
+    "message": "A kiválasztott szöveg készen áll. Ellenőrizd a személyt, és tudatosan indítsd el."
+  },
+  "disconnected": {
+    "message": "Kapcsolat bontva. A futó időmérő tovább fut."
+  },
+  "stale": {
+    "message": "Az állapot még nincs megerősítve"
+  },
+  "synced": {
+    "message": "Frissítve"
+  },
+  "timeTracking": {
+    "message": "Munkaidő-nyilvántartás"
+  },
+  "description": {
+    "message": "Leírás"
+  },
+  "descriptionPlaceholder": {
+    "message": "Min dolgozol?"
+  },
+  "noProject": {
+    "message": "Projekt nélkül"
+  },
+  "untitled": {
+    "message": "Leírás nélkül"
+  },
+  "start": {
+    "message": "Időzítő indítása"
+  },
+  "stop": {
+    "message": "Időzítő leállítása"
+  },
+  "save": {
+    "message": "Mentés"
+  },
+  "discard": {
+    "message": "Időzítő elvetése"
+  },
+  "client": {
+    "message": "Ügyfél · Szűrő"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Feladat"
+  },
+  "billable": {
+    "message": "Számlázható"
+  },
+  "searchClients": {
+    "message": "Ügyfél keresése…"
+  },
+  "searchProjects": {
+    "message": "Keresés..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Következő"
+  },
+  "refresh": {
+    "message": "Frissítés"
+  },
+  "dropDraft": {
+    "message": "Törlés"
+  },
+  "archived": {
+    "message": "Inaktív"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Csatlakozás a Fin3000-hez"
+  },
+  "disconnect": {
+    "message": "Kapcsolat bontása"
+  },
+  "connecting": {
+    "message": "A Fin3000-kapcsolat megnyitása …"
+  },
+  "connectionCancelled": {
+    "message": "A csatlakozást megszakították."
+  },
+  "checking": {
+    "message": "Az átvétel ellenőrzése folyamatban van. Ne küldje el újra."
+  },
+  "busy": {
+    "message": "Kérjük, várjon …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Indítsd és állítsd le az időmérést a böngészőben, és rendeld ügyfelekhez és projektekhez."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Időzítő indítása"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Hozzáférés megtagadva"
+  },
+  "configuration": {
+    "message": "A folytatás előtt frissítsd a bővítményt."
+  },
+  "serverError": {
+    "message": "Váratlan hiba történt"
+  },
+  "invalidInput": {
+    "message": "Érvénytelen érték"
+  },
+  "refreshFirst": {
+    "message": "Az állapot még nincs megerősítve"
+  },
+  "connectForCapture": {
+    "message": "Időkövetés csatlakoztatása"
+  },
+  "stopQueued": {
+    "message": "Időzítő leállítása · Kérjük, várjon …"
+  },
+  "noResults": {
+    "message": "Nincs találat"
+  },
+  "loading": {
+    "message": "Betöltés..."
+  },
+  "clearSelection": {
+    "message": "Kijelölés megszüntetése"
+  }
+}
