@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Свързване на отчитането на време"
+  },
+  "connectBody": {
+    "message": "Стартирайте и спирайте времето в браузъра и го свързвайте с клиенти и проекти."
+  },
+  "verifiedNotice": {
+    "message": "Официалното разширение Fin3000 изпраща текста на избрания елемент като описание. Чете само вашия таймер и разрешените клиенти и проекти."
+  },
+  "scope": {
+    "message": "Четене, стартиране, редактиране, спиране и отхвърляне на собственото време"
+  },
+  "permissionDenied": {
+    "message": "Нямате нужното разрешение за отчитане на време."
+  },
+  "running": {
+    "message": "Таймерът работи"
+  },
+  "idle": {
+    "message": "Няма работещ таймер"
+  },
+  "manualCapture": {
+    "message": "Този елемент не може да бъде взет. Въведете описанието ръчно."
+  },
+  "dirtyStop": {
+    "message": "Спирането записва запазените стойности. Незапазените промени остават като чернова."
+  },
+  "taskCleared": {
+    "message": "Смяната на проекта премахва предишната задача."
+  },
+  "recoveryTitle": {
+    "message": "Незапазена чернова"
+  },
+  "discardConfirm": {
+    "message": "Да се отхвърли ли таймерът? Няма да бъде създаден запис за време."
+  },
+  "confirmed": {
+    "message": "Действието на таймера е потвърдено."
+  },
+  "conflict": {
+    "message": "Таймерът е променен. Обновете и проверете текущото състояние."
+  },
+  "expiredAction": {
+    "message": "Действието е изтекло. Проверете таймера преди ново действие."
+  },
+  "longTimer": {
+    "message": "Отчетени са повече от 24 часа. Проверете записа във Fin3000."
+  },
+  "updateRequired": {
+    "message": "Обновете разширението, преди да продължите."
+  },
+  "storageError": {
+    "message": "Локалното хранилище не е достъпно. Отворете разширението отново."
+  },
+  "rateLimited": {
+    "message": "Изчакайте и обновете състоянието по-късно."
+  },
+  "connectAgain": {
+    "message": "Свържете разширението отново. Работещият таймер продължава да работи."
+  },
+  "captureReady": {
+    "message": "Избраният текст е готов. Проверете лицето и стартирайте съзнателно."
+  },
+  "disconnected": {
+    "message": "Връзката е прекъсната. Работещият таймер продължава да работи."
+  },
+  "stale": {
+    "message": "Състоянието още не е потвърдено"
+  },
+  "synced": {
+    "message": "Обновено"
+  },
+  "timeTracking": {
+    "message": "Отчитане на работно време"
+  },
+  "description": {
+    "message": "Описание"
+  },
+  "descriptionPlaceholder": {
+    "message": "По какво работиш?"
+  },
+  "noProject": {
+    "message": "Без проект"
+  },
+  "untitled": {
+    "message": "Без описание"
+  },
+  "start": {
+    "message": "Стартиране на таймера"
+  },
+  "stop": {
+    "message": "Спиране на таймера"
+  },
+  "save": {
+    "message": "Запазване"
+  },
+  "discard": {
+    "message": "Отхвърляне на таймера"
+  },
+  "client": {
+    "message": "Клиент · Филтър"
+  },
+  "project": {
+    "message": "Проект"
+  },
+  "task": {
+    "message": "Задача"
+  },
+  "billable": {
+    "message": "Фактурируемо"
+  },
+  "searchClients": {
+    "message": "Търсене на клиент…"
+  },
+  "searchProjects": {
+    "message": "Търсене..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Следваща"
+  },
+  "refresh": {
+    "message": "Актуализиране"
+  },
+  "dropDraft": {
+    "message": "Изтриване"
+  },
+  "archived": {
+    "message": "Неактивен"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Свързване с Fin3000"
+  },
+  "disconnect": {
+    "message": "Прекъсване на връзката"
+  },
+  "connecting": {
+    "message": "Отваря се връзката с Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Свързването беше отменено."
+  },
+  "checking": {
+    "message": "Получаването се проверява. Не изпращайте отново."
+  },
+  "busy": {
+    "message": "Моля, изчакайте …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Стартирайте и спирайте времето в браузъра и го свързвайте с клиенти и проекти."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Стартиране на таймера"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Достъпът е отказан"
+  },
+  "configuration": {
+    "message": "Обновете разширението, преди да продължите."
+  },
+  "serverError": {
+    "message": "Възникна неочаквана грешка"
+  },
+  "invalidInput": {
+    "message": "Невалидна стойност"
+  },
+  "refreshFirst": {
+    "message": "Състоянието още не е потвърдено"
+  },
+  "connectForCapture": {
+    "message": "Свързване на отчитането на време"
+  },
+  "stopQueued": {
+    "message": "Спиране на таймера · Моля, изчакайте …"
+  },
+  "noResults": {
+    "message": "Няма резултати"
+  },
+  "loading": {
+    "message": "Зарежда..."
+  },
+  "clearSelection": {
+    "message": "Отмяна на избора"
+  }
+}

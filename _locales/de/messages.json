@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Zeiterfassung verbinden"
+  },
+  "connectBody": {
+    "message": "Starte und stoppe deine Zeit direkt im Browser und ordne sie Kunden und Projekten zu."
+  },
+  "verifiedNotice": {
+    "message": "Die offizielle Fin3000-Erweiterung überträgt den ausdrücklich gewählten Elementtext als Beschreibung. Sie liest nur deinen Timer und erlaubte Kunden und Projekte."
+  },
+  "scope": {
+    "message": "Eigene Zeit lesen, starten, bearbeiten, stoppen und verwerfen"
+  },
+  "permissionDenied": {
+    "message": "Dir fehlt die erforderliche Berechtigung für die Zeiterfassung."
+  },
+  "running": {
+    "message": "Timer läuft"
+  },
+  "idle": {
+    "message": "Kein Timer läuft"
+  },
+  "manualCapture": {
+    "message": "Dieses Element kann nicht übernommen werden. Gib die Beschreibung manuell ein."
+  },
+  "dirtyStop": {
+    "message": "Stop bucht den gespeicherten Stand. Ungespeicherte Änderungen bleiben als Entwurf erhalten."
+  },
+  "taskCleared": {
+    "message": "Beim Projektwechsel wird die bisherige Aufgabe entfernt."
+  },
+  "recoveryTitle": {
+    "message": "Ungespeicherter Entwurf"
+  },
+  "discardConfirm": {
+    "message": "Timer wirklich verwerfen? Dabei entsteht kein Zeiteintrag."
+  },
+  "confirmed": {
+    "message": "Timeraktion bestätigt."
+  },
+  "conflict": {
+    "message": "Der Timer wurde zwischenzeitlich geändert. Aktualisiere und prüfe den neuen Stand."
+  },
+  "expiredAction": {
+    "message": "Die Aktion ist abgelaufen. Prüfe den aktuellen Timer, bevor du eine neue Aktion auslöst."
+  },
+  "longTimer": {
+    "message": "Mehr als 24 Stunden erfasst. Bitte prüfe den Eintrag in Fin3000."
+  },
+  "updateRequired": {
+    "message": "Bitte aktualisiere die Erweiterung, bevor du fortfährst."
+  },
+  "storageError": {
+    "message": "Der lokale Speicher ist nicht verfügbar. Öffne die Erweiterung erneut."
+  },
+  "rateLimited": {
+    "message": "Bitte warte und aktualisiere den Status später."
+  },
+  "connectAgain": {
+    "message": "Bitte verbinde die Erweiterung erneut. Ein laufender Timer läuft weiter."
+  },
+  "captureReady": {
+    "message": "Der ausgewählte Text ist bereit. Prüfe die Person und starte bewusst."
+  },
+  "disconnected": {
+    "message": "Verbindung getrennt. Ein laufender Timer läuft weiter."
+  },
+  "stale": {
+    "message": "Stand noch nicht bestätigt"
+  },
+  "synced": {
+    "message": "Aktualisiert"
+  },
+  "timeTracking": {
+    "message": "Zeiterfassung"
+  },
+  "description": {
+    "message": "Beschreibung"
+  },
+  "descriptionPlaceholder": {
+    "message": "Woran arbeitest du?"
+  },
+  "noProject": {
+    "message": "Ohne Projekt"
+  },
+  "untitled": {
+    "message": "Ohne Beschreibung"
+  },
+  "start": {
+    "message": "Timer starten"
+  },
+  "stop": {
+    "message": "Timer stoppen"
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "discard": {
+    "message": "Timer verwerfen"
+  },
+  "client": {
+    "message": "Kunde · Filter"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Aufgabe"
+  },
+  "billable": {
+    "message": "Abrechenbar"
+  },
+  "searchClients": {
+    "message": "Kunde suchen…"
+  },
+  "searchProjects": {
+    "message": "Suchen..."
+  },
+  "allClients": {
+    "message": "Alle Kunden"
+  },
+  "more": {
+    "message": "Nächste"
+  },
+  "refresh": {
+    "message": "Aktualisieren"
+  },
+  "dropDraft": {
+    "message": "Löschen"
+  },
+  "archived": {
+    "message": "Inaktiv"
+  },
+  "pickerError": {
+    "message": "Vorschläge konnten nicht geladen werden."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Mit Fin3000 verbinden"
+  },
+  "disconnect": {
+    "message": "Verbindung trennen"
+  },
+  "connecting": {
+    "message": "Fin3000-Verbindung wird geöffnet …"
+  },
+  "connectionCancelled": {
+    "message": "Verbindung wurde abgebrochen."
+  },
+  "checking": {
+    "message": "Übernahme wird geprüft. Bitte nicht erneut senden."
+  },
+  "busy": {
+    "message": "Bitte warten …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Starte und stoppe deine Zeit direkt im Browser und ordne sie Kunden und Projekten zu."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Timer starten"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Zugriff verweigert"
+  },
+  "configuration": {
+    "message": "Bitte aktualisiere die Erweiterung, bevor du fortfährst."
+  },
+  "serverError": {
+    "message": "Ein unerwarteter Fehler ist aufgetreten"
+  },
+  "invalidInput": {
+    "message": "Ungültiger Wert"
+  },
+  "refreshFirst": {
+    "message": "Stand noch nicht bestätigt"
+  },
+  "connectForCapture": {
+    "message": "Zeiterfassung verbinden"
+  },
+  "stopQueued": {
+    "message": "Timer stoppen · Bitte warten …"
+  },
+  "noResults": {
+    "message": "Keine Ergebnisse"
+  },
+  "loading": {
+    "message": "Lädt..."
+  },
+  "clearSelection": {
+    "message": "Auswahl aufheben"
+  }
+}

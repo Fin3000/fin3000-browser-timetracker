@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Yhdistä ajanseuranta"
+  },
+  "connectBody": {
+    "message": "Käynnistä ja pysäytä ajanotto selaimessa ja liitä aika asiakkaisiin ja projekteihin."
+  },
+  "verifiedNotice": {
+    "message": "Virallinen Fin3000-laajennus lähettää valitun elementin tekstin kuvauksena. Se lukee vain oman ajastimesi sekä sallitut asiakkaat ja projektit."
+  },
+  "scope": {
+    "message": "Lue, käynnistä, muokkaa, pysäytä ja hylkää omaa aikaa"
+  },
+  "permissionDenied": {
+    "message": "Sinulla ei ole tarvittavaa ajanseurannan käyttöoikeutta."
+  },
+  "running": {
+    "message": "Ajastin käynnissä"
+  },
+  "idle": {
+    "message": "Ei käynnissä olevaa ajastinta"
+  },
+  "manualCapture": {
+    "message": "Elementtiä ei voi poimia. Kirjoita kuvaus käsin."
+  },
+  "dirtyStop": {
+    "message": "Pysäytys kirjaa tallennetut arvot. Tallentamattomat muutokset säilyvät luonnoksena."
+  },
+  "taskCleared": {
+    "message": "Projektin vaihtaminen poistaa aiemman tehtävän."
+  },
+  "recoveryTitle": {
+    "message": "Tallentamaton luonnos"
+  },
+  "discardConfirm": {
+    "message": "Hylätäänkö ajastin? Aikamerkintää ei luoda."
+  },
+  "confirmed": {
+    "message": "Ajastintoiminto vahvistettu."
+  },
+  "conflict": {
+    "message": "Ajastin on muuttunut. Päivitä ja tarkista nykyinen tila."
+  },
+  "expiredAction": {
+    "message": "Toiminto on vanhentunut. Tarkista ajastin ennen uutta toimintoa."
+  },
+  "longTimer": {
+    "message": "Yli 24 tuntia kirjattu. Tarkista merkintä Fin3000:ssa."
+  },
+  "updateRequired": {
+    "message": "Päivitä laajennus ennen jatkamista."
+  },
+  "storageError": {
+    "message": "Paikallinen tallennustila ei ole käytettävissä. Avaa laajennus uudelleen."
+  },
+  "rateLimited": {
+    "message": "Odota ja päivitä tila myöhemmin."
+  },
+  "connectAgain": {
+    "message": "Yhdistä laajennus uudelleen. Käynnissä oleva ajastin jatkaa toimintaansa."
+  },
+  "captureReady": {
+    "message": "Valittu teksti on valmis. Tarkista henkilö ja käynnistä erikseen."
+  },
+  "disconnected": {
+    "message": "Yhteys katkaistu. Käynnissä oleva ajastin jatkaa toimintaansa."
+  },
+  "stale": {
+    "message": "Tilaa ei ole vielä vahvistettu"
+  },
+  "synced": {
+    "message": "Päivitetty"
+  },
+  "timeTracking": {
+    "message": "Työajanseuranta"
+  },
+  "description": {
+    "message": "Kuvaus"
+  },
+  "descriptionPlaceholder": {
+    "message": "Minkä parissa työskentelet?"
+  },
+  "noProject": {
+    "message": "Ei projektia"
+  },
+  "untitled": {
+    "message": "Ei kuvausta"
+  },
+  "start": {
+    "message": "Käynnistä ajastin"
+  },
+  "stop": {
+    "message": "Pysäytä ajastin"
+  },
+  "save": {
+    "message": "Tallenna"
+  },
+  "discard": {
+    "message": "Hylkää ajastin"
+  },
+  "client": {
+    "message": "Asiakas · Suodatin"
+  },
+  "project": {
+    "message": "Projekti"
+  },
+  "task": {
+    "message": "Tehtävä"
+  },
+  "billable": {
+    "message": "Laskutettava"
+  },
+  "searchClients": {
+    "message": "Hae asiakasta…"
+  },
+  "searchProjects": {
+    "message": "Hae..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Seuraava"
+  },
+  "refresh": {
+    "message": "Päivitä"
+  },
+  "dropDraft": {
+    "message": "Poista"
+  },
+  "archived": {
+    "message": "Passiivinen"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Yhdistä Fin3000:een"
+  },
+  "disconnect": {
+    "message": "Katkaise yhteys"
+  },
+  "connecting": {
+    "message": "Avataan Fin3000-yhteyttä …"
+  },
+  "connectionCancelled": {
+    "message": "Yhdistäminen peruutettiin."
+  },
+  "checking": {
+    "message": "Vastaanottoa tarkistetaan. Älä lähetä uudelleen."
+  },
+  "busy": {
+    "message": "Odota hetki …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Käynnistä ja pysäytä ajanotto selaimessa ja liitä aika asiakkaisiin ja projekteihin."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Käynnistä ajastin"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Pääsy evätty"
+  },
+  "configuration": {
+    "message": "Päivitä laajennus ennen jatkamista."
+  },
+  "serverError": {
+    "message": "Tapahtui odottamaton virhe"
+  },
+  "invalidInput": {
+    "message": "Virheellinen arvo"
+  },
+  "refreshFirst": {
+    "message": "Tilaa ei ole vielä vahvistettu"
+  },
+  "connectForCapture": {
+    "message": "Yhdistä ajanseuranta"
+  },
+  "stopQueued": {
+    "message": "Pysäytä ajastin · Odota hetki …"
+  },
+  "noResults": {
+    "message": "Ei tuloksia"
+  },
+  "loading": {
+    "message": "Ladataan..."
+  },
+  "clearSelection": {
+    "message": "Poista valinta"
+  }
+}

@@ -1,93 +1,164 @@
-# fin3000-firefox-timetracker
+# Fin3000 Firefox-Zeiterfassung
 
-Fin3000 Firefox-Zeiterfassung: Rechtsklick, Toolbar-Timer, Kunden- und Projektzuordnung.
+Firefox ab 140: Element per Rechtsklick erfassen, eigene Zeit starten/stoppen,
+Beschreibung, Projekt und Abrechenbarkeit im Toolbar-Popup bearbeiten.
+Kunden filtern die Projektauswahl; die Kundenzuordnung kommt vom Projekt.
+Das Popup zeigt Account und tatsächlichen Mitarbeiter. Änderungen werden
+ausdrücklich gespeichert. Stop bucht den zuletzt bestätigten Serverstand;
+ungespeicherte Änderungen bleiben als gekennzeichneter Entwurf erhalten.
 
-## Getting started
+## Repository und Build
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+GitLab: [ideal3000-library/fin3000-firefox-timetracker](https://gitlab.com/ideal3000-library/fin3000-firefox-timetracker).
+Lokaler Workspace-Pfad: `fin3000/tools/firefox-timetracker`.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
+```bash
+git clone git@gitlab.com:ideal3000-library/fin3000-firefox-timetracker.git
+cd fin3000-firefox-timetracker
+npm ci
+npm run typecheck
+npm test
+npm run build
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/ideal3000-library/fin3000-firefox-timetracker.git
-git branch -M main
-git push -uf origin main
+
+Für die DOM-Tests einmal `npx playwright install chromium` ausführen oder
+`FIN3000_CHROMIUM` auf ein vorhandenes Chromium setzen. `zip` wird für den
+Paketbuild benötigt. Build und Tests benötigen keinen Angular-Checkout.
+API und OAuth-Consent bleiben in `fin3000-backend` bzw. `fin3000-frontend`;
+der vollständige Verbindungstest benötigt deren isolierten QA-Stack.
+
+Die Auslagerung übernimmt den Extensionstand aus `fin3000-frontend` Commit
+`f64f9a14` einschließlich der korrigierten Suchfelder. Die Version `0.19.0`
+bleibt erhalten, um ein Add-on-Downgrade zu vermeiden; künftige Versionen
+werden unabhängig von der Web-App geführt. Release im Workspace über
+`scripts/release.sh cut <feature-worktree> patch`.
+
+Quellen liegen unter `src/`, Konfiguration unter `config/`, native Übersetzungen
+unter `_locales/`, eigene Assets unter `assets/`, Werkzeuge unter `scripts/`.
+Inter stammt aus [rsms/inter](https://github.com/rsms/inter) und wird unter der
+[Sil Open Font License](assets/Inter-OFL.txt) mitgeliefert.
+
+## Isoliert ausprobieren
+
+Node 22+, `npm ci`, `zip`, Firefox und geckodriver werden lokal benötigt.
+Der Runner installiert nichts in einem persönlichen Browserprofil.
+
+```bash
+# Backend-Worktree, separates Terminal:
+QA_SLUG=firefox-timetracker bash scripts/qa_server.sh --fresh --worker --clamd-stub
+
+# Frontend-Worktree, separates Terminal:
+QA_SLUG=firefox-timetracker npm run qa
+
+# Dieses Erweiterungs-Repository:
+QA_SLUG=firefox-timetracker npm run timer-extension:doctor -- --json
+QA_SLUG=firefox-timetracker npm run timer-extension:build:qa
 ```
 
-## Integrate with your tools
+Firefox → `about:debugging#/runtime/this-firefox` → „Temporäres Add-on laden“ →
+`dist/timer-extension/qa/unpacked/manifest.json`. Fin3000 über das
+Erweiterungsmenü an die Symbolleiste anheften. Popup öffnen und verbinden.
+Seedkonto: `qa-timer-full@fin3000.test`; das QA-Passwort steht ausschließlich
+im bestehenden Seedvertrag `backend/src/common/qa_seed/base.py`.
 
-* [Set up project integrations](https://gitlab.com/ideal3000-library/fin3000-firefox-timetracker/-/settings/integrations)
+Die synthetische Testseite ist `tests/fixtures/timer-extension.html`.
+Der native Runner stellt sie über einen eigenen Loopback-Webserver bereit:
 
-## Collaborate with your team
+```bash
+QA_SLUG=firefox-timetracker npm run timer-extension:smoke:firefox -- \
+  --mode temporary --scenario interactive --duration 600
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+# Automatisch; FIN3000_QA_PASSWORD aus dem QA-Seedvertrag setzen:
+QA_SLUG=firefox-timetracker npm run timer-extension:smoke:firefox -- \
+  --mode temporary --json
 
-## Test and Deploy
+# Einmaliger Antwortverlust nach Commit; Paketupdate und Prozessneustart:
+QA_SLUG=firefox-timetracker npm run timer-extension:smoke:firefox -- \
+  --mode packaged --fault response-loss --json
+```
 
-Use the built-in continuous integration in GitLab.
+`FIN3000_FIREFOX` und `FIN3000_GECKODRIVER` wählen explizite Binaries.
+Bei Snap-Firefox muss geckodriver im passenden Snap-Kontext laufen; für eine
+separate Mozilla-Installation einen unbeschränkten geckodriver verwenden.
+Der Runner benötigt dessen `--allow-system-access` für native Browser-UI.
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+## Paketinstallation und Neustart
 
-***
+Das erzeugte XPI ist **unsigniert**. Normales Firefox akzeptiert es dauerhaft
+erst nach Mozilla-Signierung. Für lokale Paket-QA Developer Edition/Nightly
+als `FIN3000_FIREFOX` wählen und `--mode packaged` verwenden. Der Runner
+deaktiviert die Signaturpflicht ausschließlich im disposable QA-Profil,
+bedient `about:addons`, lehnt den echten Berechtigungs-/Datendialog zunächst
+ab und bestätigt ihn beim zweiten Versuch. Ein echter Prozessneustart prüft
+anschließend Installation, Verbindung und Entwurf ohne Neuinstallation.
+Ein temporäres Add-on ersetzt diese Prüfung nicht.
 
-# Editing this README
+Der Paketmodus erzeugt zusätzlich ein separates kompatibles QA-Update mit
+erhöhter Testversion und prüft den Entwurf vor dem Neustart. `--fault
+response-loss` verwirft genau eine Startantwort nach Server-Commit;
+`--fault request-loss` genau eine Startanfrage davor. Ein eigener Loopback-
+Proxy zählt ausschließlich Requests, erfolgreiche Starts und Belegabfragen.
+Der Proxy liefert dafür einmalig HTTP 502, damit Firefox die Anfrage nicht
+selbst transparent wiederholt. Er speichert keine Header, Tokens oder Inhalte. Ein Produktpaket wird durch
+diese Testartefakte nicht ersetzt; vor Weitergabe neu bauen.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+`--scenario compatibility --mode packaged` prüft außerdem die sichtbare Sperre
+bei unbekanntem Protokoll und nach einem IndexedDB-Downgrade sowie die
+Wiederherstellung von Verbindung und Entwurf durch ein kompatibles Update.
+`--scenario auth --username qa-2fa-totp@fin3000.test` prüft nur Verbindung und
+Trennung; `FIN3000_QA_TOTP_SECRET` nimmt den benannten TOTP-Seed aus dem
+QA-Vertrag entgegen. Zugangsdaten erscheinen nicht im Bericht.
 
-## Suggestions for a good README
+Das Popup ist 320–360 CSS-Pixel breit und passt seine Höhe zwischen 300 und
+580 CSS-Pixeln an. Der Stop-Knopf bleibt über dem scrollbaren Formular
+sichtbar; das gilt auch bei 200 % Zoom. Helles und dunkles Firefox-Theme
+werden über die Systemeinstellung übernommen.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## Prüfungen und Artefakte
 
-## Name
-Choose a self-explaining name for your project.
+```bash
+npm run timer-extension:typecheck
+QA_SLUG=firefox-timetracker npm run timer-extension:test
+QA_SLUG=firefox-timetracker npm run timer-extension:repro:qa
+npm run timer-extension:build:production
+npm run timer-extension:inspect -- --profile production
+```
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+DOM-Tests benötigen Playwright-Chromium; `FIN3000_CHROMIUM` kann ein bereits
+installiertes Chromium-Binary wählen. CI stellt Chromium bereit.
+`--help` und `--json` gelten für alle Timer-CLIs. Exitcodes: 2 ungültige
+Argumente/Konfiguration, 3 fehlende Voraussetzung, 4 fehlgeschlagene Prüfung.
+Build und Inspector prüfen feste Identitäten, Berechtigungen, Dateiliste
+und alle 26 Sprachkataloge. Repro baut zweimal und vergleicht XPI-SHA256.
+Artefakte liegen unter `dist/timer-extension/<qa|production>/`; native
+Screenshots unter `qa/native/`. Ein erneuter Build ersetzt dieses Verzeichnis.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Verbindungs- und Datenschutzvertrag
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+OAuth-PKCE verwendet ausschließlich `timer:self`, bestehende Anmeldung und
+aktuelle Bestätigung. Keine API-Token-Eingabe, kein Zugriff auf fremde Timer.
+Produktions-URLs und OAuth-Identität sind im Profil fest. Nur das QA-Profil
+akzeptiert `QA_SLUG` und explizite `FIN3000_TIMER_API_ORIGIN`/
+`FIN3000_TIMER_FRONTEND_ORIGIN` mit HTTP-Loopback-Origins. Firefox unterstützt
+keine Ports in Host-Match-Patterns; das QA-Manifest nennt deshalb den genauen
+Loopback-Host, während sämtliche API-Aufrufe den konfigurierten Port behalten.
+Siehe [Mozilla Match Patterns](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Nur der Hintergrundprozess speichert Tokens und angenommene Aktionen in
+IndexedDB. Popup-Nachrichten enthalten keine Tokens. Keine pauschalen
+Webseitenrechte, keine persistenten Content-Scripts, kein privater Modus.
+Rechtsklick nutzt `activeTab` im konkreten Frame und liest nur sichtbaren
+Elementtext, höchstens 500 Unicode-Codepoints. HTML, URL und Formularwerte
+werden nicht übertragen. Details: [PRIVACY.md](PRIVACY.md).
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Ungewisse Aktionen werden mit derselben ID über einen Serverbeleg abgeglichen.
+Ein 404-Beleg bedeutet keinen nachgewiesenen Rollback. Nach Ablauf des
+300-Sekunden-Fensters entsteht nur durch einen neuen bewussten Klick eine neue
+Aktion. Offline-Zeiten werden nicht lokal gebucht. Disconnect stoppt keinen
+laufenden Server-Timer. Nach fehlgeschlagener Tokenrotation erneut verbinden.
+Ein unbekanntes Protokoll oder Speicherschema sperrt Aktionen sichtbar.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Chrome/Edge benötigen einen eigenen Manifest-/Identity-Adapter und Store-QA;
+Safari zusätzlich die Apple-Verpackung. Diese Browser sind noch keine
+freigegebenen Targets. Der gemeinsame Timer-/OAuth-/Zustandskern bleibt
+unabhängig vom Angular-Bundle und wird dafür wiederverwendet.

@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Zaman takibini bağla"
+  },
+  "connectBody": {
+    "message": "Tarayıcıda zamanını başlatıp durdur ve müşterilere ve projelere ata."
+  },
+  "verifiedNotice": {
+    "message": "Resmî Fin3000 uzantısı, seçilen öğenin metnini açıklama olarak gönderir. Yalnızca kendi sayacını ve izin verilen müşterileri ve projeleri okur."
+  },
+  "scope": {
+    "message": "Kendi zamanını okuma, başlatma, düzenleme, durdurma ve silme"
+  },
+  "permissionDenied": {
+    "message": "Zaman takibi için gerekli iznin yok."
+  },
+  "running": {
+    "message": "Sayaç çalışıyor"
+  },
+  "idle": {
+    "message": "Çalışan sayaç yok"
+  },
+  "manualCapture": {
+    "message": "Bu öğe alınamıyor. Açıklamayı elle gir."
+  },
+  "dirtyStop": {
+    "message": "Durdurma, kaydedilmiş değerleri işler. Kaydedilmemiş değişiklikler taslak olarak kalır."
+  },
+  "taskCleared": {
+    "message": "Proje değiştirildiğinde önceki görev kaldırılır."
+  },
+  "recoveryTitle": {
+    "message": "Kaydedilmemiş taslak"
+  },
+  "discardConfirm": {
+    "message": "Bu sayaç silinsin mi? Zaman kaydı oluşturulmayacak."
+  },
+  "confirmed": {
+    "message": "Sayaç işlemi onaylandı."
+  },
+  "conflict": {
+    "message": "Sayaç bu sırada değişti. Yenile ve güncel durumu kontrol et."
+  },
+  "expiredAction": {
+    "message": "İşlemin süresi doldu. Yeni bir işlemden önce sayacı kontrol et."
+  },
+  "longTimer": {
+    "message": "24 saatten fazla kaydedildi. Fin3000’deki kaydı kontrol et."
+  },
+  "updateRequired": {
+    "message": "Devam etmeden önce uzantıyı güncelle."
+  },
+  "storageError": {
+    "message": "Yerel depolama kullanılamıyor. Uzantıyı yeniden aç."
+  },
+  "rateLimited": {
+    "message": "Bekle ve durumu daha sonra yenile."
+  },
+  "connectAgain": {
+    "message": "Uzantıyı yeniden bağla. Çalışan bir sayaç çalışmaya devam eder."
+  },
+  "captureReady": {
+    "message": "Seçilen metin hazır. Kişiyi kontrol et ve bilerek başlat."
+  },
+  "disconnected": {
+    "message": "Bağlantı kesildi. Çalışan bir sayaç çalışmaya devam eder."
+  },
+  "stale": {
+    "message": "Durum henüz onaylanmadı"
+  },
+  "synced": {
+    "message": "Güncellendi"
+  },
+  "timeTracking": {
+    "message": "Zaman takibi"
+  },
+  "description": {
+    "message": "Açıklama"
+  },
+  "descriptionPlaceholder": {
+    "message": "Ne üzerinde çalışıyorsunuz?"
+  },
+  "noProject": {
+    "message": "Projesiz"
+  },
+  "untitled": {
+    "message": "Açıklamasız"
+  },
+  "start": {
+    "message": "Zamanlayıcıyı başlat"
+  },
+  "stop": {
+    "message": "Zamanlayıcıyı durdur"
+  },
+  "save": {
+    "message": "Kaydet"
+  },
+  "discard": {
+    "message": "Zamanlayıcıyı sil"
+  },
+  "client": {
+    "message": "Müşteri · Filtre"
+  },
+  "project": {
+    "message": "Proje"
+  },
+  "task": {
+    "message": "Görev"
+  },
+  "billable": {
+    "message": "Faturalandırılabilir"
+  },
+  "searchClients": {
+    "message": "Müşteri ara…"
+  },
+  "searchProjects": {
+    "message": "Ara..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Sonraki"
+  },
+  "refresh": {
+    "message": "Yenile"
+  },
+  "dropDraft": {
+    "message": "Sil"
+  },
+  "archived": {
+    "message": "Pasif"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Fin3000’e bağlan"
+  },
+  "disconnect": {
+    "message": "Bağlantıyı kes"
+  },
+  "connecting": {
+    "message": "Fin3000 bağlantısı açılıyor …"
+  },
+  "connectionCancelled": {
+    "message": "Bağlantı iptal edildi."
+  },
+  "checking": {
+    "message": "Alım kontrol ediliyor. Lütfen yeniden göndermeyin."
+  },
+  "busy": {
+    "message": "Lütfen bekleyin …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Tarayıcıda zamanını başlatıp durdur ve müşterilere ve projelere ata."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Zamanlayıcıyı başlat"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Erişim reddedildi"
+  },
+  "configuration": {
+    "message": "Devam etmeden önce uzantıyı güncelle."
+  },
+  "serverError": {
+    "message": "Beklenmeyen bir hata oluştu"
+  },
+  "invalidInput": {
+    "message": "Geçersiz değer"
+  },
+  "refreshFirst": {
+    "message": "Durum henüz onaylanmadı"
+  },
+  "connectForCapture": {
+    "message": "Zaman takibini bağla"
+  },
+  "stopQueued": {
+    "message": "Zamanlayıcıyı durdur · Lütfen bekleyin …"
+  },
+  "noResults": {
+    "message": "Sonuç yok"
+  },
+  "loading": {
+    "message": "Yükleniyor..."
+  },
+  "clearSelection": {
+    "message": "Seçimi kaldır"
+  }
+}

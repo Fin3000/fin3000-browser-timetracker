@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Anslut tidsregistrering"
+  },
+  "connectBody": {
+    "message": "Starta och stoppa din tid i webbläsaren och koppla den till kunder och projekt."
+  },
+  "verifiedNotice": {
+    "message": "Det officiella Fin3000-tillägget skickar texten från det valda elementet som beskrivning. Det läser endast din timer och tillåtna kunder och projekt."
+  },
+  "scope": {
+    "message": "Läsa, starta, redigera, stoppa och kasta din egen tid"
+  },
+  "permissionDenied": {
+    "message": "Du saknar behörighet för tidsregistrering."
+  },
+  "running": {
+    "message": "Timern körs"
+  },
+  "idle": {
+    "message": "Ingen timer körs"
+  },
+  "manualCapture": {
+    "message": "Elementet kan inte hämtas. Ange beskrivningen manuellt."
+  },
+  "dirtyStop": {
+    "message": "Stopp registrerar de sparade värdena. Osparade ändringar finns kvar som utkast."
+  },
+  "taskCleared": {
+    "message": "När projektet ändras tas den tidigare uppgiften bort."
+  },
+  "recoveryTitle": {
+    "message": "Osparat utkast"
+  },
+  "discardConfirm": {
+    "message": "Kasta timern? Ingen tidspost skapas."
+  },
+  "confirmed": {
+    "message": "Timeråtgärden bekräftad."
+  },
+  "conflict": {
+    "message": "Timern har ändrats. Uppdatera och kontrollera aktuellt läge."
+  },
+  "expiredAction": {
+    "message": "Åtgärden har gått ut. Kontrollera timern innan du startar en ny åtgärd."
+  },
+  "longTimer": {
+    "message": "Mer än 24 timmar registrerade. Kontrollera posten i Fin3000."
+  },
+  "updateRequired": {
+    "message": "Uppdatera tillägget innan du fortsätter."
+  },
+  "storageError": {
+    "message": "Lokal lagring är inte tillgänglig. Öppna tillägget igen."
+  },
+  "rateLimited": {
+    "message": "Vänta och uppdatera statusen senare."
+  },
+  "connectAgain": {
+    "message": "Anslut tillägget igen. En aktiv timer fortsätter att gå."
+  },
+  "captureReady": {
+    "message": "Den valda texten är klar. Kontrollera personen och starta medvetet."
+  },
+  "disconnected": {
+    "message": "Frånkopplad. En aktiv timer fortsätter att gå."
+  },
+  "stale": {
+    "message": "Status ännu inte bekräftad"
+  },
+  "synced": {
+    "message": "Uppdaterad"
+  },
+  "timeTracking": {
+    "message": "Tidrapportering"
+  },
+  "description": {
+    "message": "Beskrivning"
+  },
+  "descriptionPlaceholder": {
+    "message": "Vad jobbar du med?"
+  },
+  "noProject": {
+    "message": "Utan projekt"
+  },
+  "untitled": {
+    "message": "Utan beskrivning"
+  },
+  "start": {
+    "message": "Starta timer"
+  },
+  "stop": {
+    "message": "Stoppa timer"
+  },
+  "save": {
+    "message": "Spara"
+  },
+  "discard": {
+    "message": "Kasta timer"
+  },
+  "client": {
+    "message": "Kund · Filter"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Uppgift"
+  },
+  "billable": {
+    "message": "Debiterbar"
+  },
+  "searchClients": {
+    "message": "Sök kund…"
+  },
+  "searchProjects": {
+    "message": "Sök..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Nästa"
+  },
+  "refresh": {
+    "message": "Uppdatera"
+  },
+  "dropDraft": {
+    "message": "Ta bort"
+  },
+  "archived": {
+    "message": "Inaktiv"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Anslut till Fin3000"
+  },
+  "disconnect": {
+    "message": "Koppla från"
+  },
+  "connecting": {
+    "message": "Öppnar anslutningen till Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Anslutningen avbröts."
+  },
+  "checking": {
+    "message": "Mottagandet kontrolleras. Skicka inte igen."
+  },
+  "busy": {
+    "message": "Vänta …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Starta och stoppa din tid i webbläsaren och koppla den till kunder och projekt."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Starta timer"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Åtkomst nekad"
+  },
+  "configuration": {
+    "message": "Uppdatera tillägget innan du fortsätter."
+  },
+  "serverError": {
+    "message": "Ett oväntat fel inträffade"
+  },
+  "invalidInput": {
+    "message": "Ogiltigt värde"
+  },
+  "refreshFirst": {
+    "message": "Status ännu inte bekräftad"
+  },
+  "connectForCapture": {
+    "message": "Anslut tidsregistrering"
+  },
+  "stopQueued": {
+    "message": "Stoppa timer · Vänta …"
+  },
+  "noResults": {
+    "message": "Inga resultat"
+  },
+  "loading": {
+    "message": "Laddar..."
+  },
+  "clearSelection": {
+    "message": "Avmarkera"
+  }
+}

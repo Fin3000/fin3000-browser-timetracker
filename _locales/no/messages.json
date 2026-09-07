@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Koble til tidsregistrering"
+  },
+  "connectBody": {
+    "message": "Start og stopp tiden i nettleseren og knytt den til kunder og prosjekter."
+  },
+  "verifiedNotice": {
+    "message": "Den offisielle Fin3000-utvidelsen sender teksten fra det valgte elementet som beskrivelse. Den leser bare tidtakeren din og tillatte kunder og prosjekter."
+  },
+  "scope": {
+    "message": "Lese, starte, redigere, stoppe og forkaste din egen tid"
+  },
+  "permissionDenied": {
+    "message": "Du mangler nødvendig tillatelse til tidsregistrering."
+  },
+  "running": {
+    "message": "Tidtakeren går"
+  },
+  "idle": {
+    "message": "Ingen tidtaker går"
+  },
+  "manualCapture": {
+    "message": "Elementet kan ikke hentes. Skriv beskrivelsen manuelt."
+  },
+  "dirtyStop": {
+    "message": "Stopp registrerer de lagrede verdiene. Ulagrede endringer beholdes som utkast."
+  },
+  "taskCleared": {
+    "message": "Når prosjektet endres, fjernes den tidligere oppgaven."
+  },
+  "recoveryTitle": {
+    "message": "Ulagret utkast"
+  },
+  "discardConfirm": {
+    "message": "Forkaste denne tidtakeren? Ingen tidsregistrering blir opprettet."
+  },
+  "confirmed": {
+    "message": "Tidtakerhandlingen er bekreftet."
+  },
+  "conflict": {
+    "message": "Tidtakeren er endret. Oppdater og kontroller gjeldende status."
+  },
+  "expiredAction": {
+    "message": "Handlingen er utløpt. Kontroller tidtakeren før du starter en ny handling."
+  },
+  "longTimer": {
+    "message": "Mer enn 24 timer registrert. Kontroller oppføringen i Fin3000."
+  },
+  "updateRequired": {
+    "message": "Oppdater utvidelsen før du fortsetter."
+  },
+  "storageError": {
+    "message": "Lokal lagring er utilgjengelig. Åpne utvidelsen på nytt."
+  },
+  "rateLimited": {
+    "message": "Vent og oppdater statusen senere."
+  },
+  "connectAgain": {
+    "message": "Koble til utvidelsen på nytt. En aktiv tidtaker fortsetter å gå."
+  },
+  "captureReady": {
+    "message": "Den valgte teksten er klar. Kontroller personen og start bevisst."
+  },
+  "disconnected": {
+    "message": "Frakoblet. En aktiv tidtaker fortsetter å gå."
+  },
+  "stale": {
+    "message": "Status er ennå ikke bekreftet"
+  },
+  "synced": {
+    "message": "Oppdatert"
+  },
+  "timeTracking": {
+    "message": "Timeregistrering"
+  },
+  "description": {
+    "message": "Beskrivelse"
+  },
+  "descriptionPlaceholder": {
+    "message": "Hva jobber du med?"
+  },
+  "noProject": {
+    "message": "Uten prosjekt"
+  },
+  "untitled": {
+    "message": "Uten beskrivelse"
+  },
+  "start": {
+    "message": "Start tidtaker"
+  },
+  "stop": {
+    "message": "Stopp tidtaker"
+  },
+  "save": {
+    "message": "Lagre"
+  },
+  "discard": {
+    "message": "Forkast tidtaker"
+  },
+  "client": {
+    "message": "Kunde · Filter"
+  },
+  "project": {
+    "message": "Prosjekt"
+  },
+  "task": {
+    "message": "Oppgave"
+  },
+  "billable": {
+    "message": "Fakturerbar"
+  },
+  "searchClients": {
+    "message": "Søk etter kunde…"
+  },
+  "searchProjects": {
+    "message": "Søk..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Neste"
+  },
+  "refresh": {
+    "message": "Oppdater"
+  },
+  "dropDraft": {
+    "message": "Slett"
+  },
+  "archived": {
+    "message": "Inaktiv"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Koble til Fin3000"
+  },
+  "disconnect": {
+    "message": "Koble fra"
+  },
+  "connecting": {
+    "message": "Åpner tilkoblingen til Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Tilkoblingen ble avbrutt."
+  },
+  "checking": {
+    "message": "Mottaket kontrolleres. Ikke send på nytt."
+  },
+  "busy": {
+    "message": "Vent litt …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Start og stopp tiden i nettleseren og knytt den til kunder og prosjekter."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Start tidtaker"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Tilgang nektet"
+  },
+  "configuration": {
+    "message": "Oppdater utvidelsen før du fortsetter."
+  },
+  "serverError": {
+    "message": "Det oppsto en uventet feil"
+  },
+  "invalidInput": {
+    "message": "Ugyldig verdi"
+  },
+  "refreshFirst": {
+    "message": "Status er ennå ikke bekreftet"
+  },
+  "connectForCapture": {
+    "message": "Koble til tidsregistrering"
+  },
+  "stopQueued": {
+    "message": "Stopp tidtaker · Vent litt …"
+  },
+  "noResults": {
+    "message": "Ingen resultater"
+  },
+  "loading": {
+    "message": "Laster..."
+  },
+  "clearSelection": {
+    "message": "Fjern utvalg"
+  }
+}

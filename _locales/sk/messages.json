@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Pripojiť sledovanie času"
+  },
+  "connectBody": {
+    "message": "Spúšťajte a zastavujte čas v prehliadači a priraďujte ho klientom a projektom."
+  },
+  "verifiedNotice": {
+    "message": "Oficiálne rozšírenie Fin3000 odosiela text zvoleného prvku ako popis. Číta iba váš časovač a povolených klientov a projekty."
+  },
+  "scope": {
+    "message": "Čítať, spúšťať, upravovať, zastavovať a zahadzovať vlastný čas"
+  },
+  "permissionDenied": {
+    "message": "Nemáte potrebné oprávnenie na sledovanie času."
+  },
+  "running": {
+    "message": "Časovač beží"
+  },
+  "idle": {
+    "message": "Žiadny časovač nebeží"
+  },
+  "manualCapture": {
+    "message": "Tento prvok sa nedá prevziať. Zadajte popis ručne."
+  },
+  "dirtyStop": {
+    "message": "Zastavenie zapíše uložené hodnoty. Neuložené zmeny zostanú ako koncept."
+  },
+  "taskCleared": {
+    "message": "Zmena projektu odstráni predchádzajúcu úlohu."
+  },
+  "recoveryTitle": {
+    "message": "Neuložený koncept"
+  },
+  "discardConfirm": {
+    "message": "Zahodiť tento časovač? Záznam času sa nevytvorí."
+  },
+  "confirmed": {
+    "message": "Akcia časovača potvrdená."
+  },
+  "conflict": {
+    "message": "Časovač sa medzičasom zmenil. Obnovte a skontrolujte aktuálny stav."
+  },
+  "expiredAction": {
+    "message": "Akcia vypršala. Pred novou akciou skontrolujte časovač."
+  },
+  "longTimer": {
+    "message": "Zaznamenaných viac ako 24 hodín. Skontrolujte záznam vo Fin3000."
+  },
+  "updateRequired": {
+    "message": "Pred pokračovaním aktualizujte rozšírenie."
+  },
+  "storageError": {
+    "message": "Miestne úložisko nie je dostupné. Otvorte rozšírenie znova."
+  },
+  "rateLimited": {
+    "message": "Počkajte a obnovte stav neskôr."
+  },
+  "connectAgain": {
+    "message": "Pripojte rozšírenie znova. Bežiaci časovač beží ďalej."
+  },
+  "captureReady": {
+    "message": "Vybraný text je pripravený. Skontrolujte osobu a vedome spustite časovač."
+  },
+  "disconnected": {
+    "message": "Odpojené. Bežiaci časovač beží ďalej."
+  },
+  "stale": {
+    "message": "Stav zatiaľ nepotvrdený"
+  },
+  "synced": {
+    "message": "Aktualizované"
+  },
+  "timeTracking": {
+    "message": "Evidencia času"
+  },
+  "description": {
+    "message": "Popis"
+  },
+  "descriptionPlaceholder": {
+    "message": "Na čom pracuješ?"
+  },
+  "noProject": {
+    "message": "Bez projektu"
+  },
+  "untitled": {
+    "message": "Bez popisu"
+  },
+  "start": {
+    "message": "Spustiť časovač"
+  },
+  "stop": {
+    "message": "Zastaviť časovač"
+  },
+  "save": {
+    "message": "Uložiť"
+  },
+  "discard": {
+    "message": "Zahodiť časovač"
+  },
+  "client": {
+    "message": "Zákazník · Filter"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Úloha"
+  },
+  "billable": {
+    "message": "Fakturovateľné"
+  },
+  "searchClients": {
+    "message": "Hľadať zákazníka…"
+  },
+  "searchProjects": {
+    "message": "Hľadať..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Nasledujúca"
+  },
+  "refresh": {
+    "message": "Aktualizovať"
+  },
+  "dropDraft": {
+    "message": "Odstrániť"
+  },
+  "archived": {
+    "message": "Neaktívne"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Pripojiť k Fin3000"
+  },
+  "disconnect": {
+    "message": "Odpojiť"
+  },
+  "connecting": {
+    "message": "Otvára sa pripojenie k Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Pripojenie bolo zrušené."
+  },
+  "checking": {
+    "message": "Prijatie sa overuje. Neodosielajte znova."
+  },
+  "busy": {
+    "message": "Čakajte, prosím …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Spúšťajte a zastavujte čas v prehliadači a priraďujte ho klientom a projektom."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Spustiť časovač"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Prístup zamietnutý"
+  },
+  "configuration": {
+    "message": "Pred pokračovaním aktualizujte rozšírenie."
+  },
+  "serverError": {
+    "message": "Nastala neočakávaná chyba"
+  },
+  "invalidInput": {
+    "message": "Neplatná hodnota"
+  },
+  "refreshFirst": {
+    "message": "Stav zatiaľ nepotvrdený"
+  },
+  "connectForCapture": {
+    "message": "Pripojiť sledovanie času"
+  },
+  "stopQueued": {
+    "message": "Zastaviť časovač · Čakajte, prosím …"
+  },
+  "noResults": {
+    "message": "Žiadne výsledky"
+  },
+  "loading": {
+    "message": "Načítava sa..."
+  },
+  "clearSelection": {
+    "message": "Zrušiť výber"
+  }
+}

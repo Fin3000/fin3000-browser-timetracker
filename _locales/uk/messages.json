@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Підключити облік часу"
+  },
+  "connectBody": {
+    "message": "Запускайте й зупиняйте час у браузері та призначайте його клієнтам і проєктам."
+  },
+  "verifiedNotice": {
+    "message": "Офіційне розширення Fin3000 надсилає текст вибраного елемента як опис. Воно читає лише ваш таймер і дозволених клієнтів та проєкти."
+  },
+  "scope": {
+    "message": "Читання, запуск, редагування, зупинка та скасування власного часу"
+  },
+  "permissionDenied": {
+    "message": "Ви не маєте потрібного дозволу на облік часу."
+  },
+  "running": {
+    "message": "Таймер працює"
+  },
+  "idle": {
+    "message": "Немає активного таймера"
+  },
+  "manualCapture": {
+    "message": "Неможливо отримати цей елемент. Введіть опис вручну."
+  },
+  "dirtyStop": {
+    "message": "Зупинка записує збережені значення. Незбережені зміни залишаються чернеткою."
+  },
+  "taskCleared": {
+    "message": "Зміна проєкту прибирає попереднє завдання."
+  },
+  "recoveryTitle": {
+    "message": "Незбережена чернетка"
+  },
+  "discardConfirm": {
+    "message": "Скасувати цей таймер? Запис часу не буде створено."
+  },
+  "confirmed": {
+    "message": "Дію таймера підтверджено."
+  },
+  "conflict": {
+    "message": "Таймер тим часом змінився. Оновіть і перевірте поточний стан."
+  },
+  "expiredAction": {
+    "message": "Термін дії сплив. Перевірте таймер перед новою дією."
+  },
+  "longTimer": {
+    "message": "Записано понад 24 години. Перевірте запис у Fin3000."
+  },
+  "updateRequired": {
+    "message": "Оновіть розширення, перш ніж продовжити."
+  },
+  "storageError": {
+    "message": "Локальне сховище недоступне. Відкрийте розширення знову."
+  },
+  "rateLimited": {
+    "message": "Зачекайте й оновіть стан пізніше."
+  },
+  "connectAgain": {
+    "message": "Підключіть розширення знову. Активний таймер продовжує працювати."
+  },
+  "captureReady": {
+    "message": "Вибраний текст готовий. Перевірте особу та свідомо запустіть таймер."
+  },
+  "disconnected": {
+    "message": "Відключено. Активний таймер продовжує працювати."
+  },
+  "stale": {
+    "message": "Стан ще не підтверджено"
+  },
+  "synced": {
+    "message": "Оновлено"
+  },
+  "timeTracking": {
+    "message": "Облік робочого часу"
+  },
+  "description": {
+    "message": "Опис"
+  },
+  "descriptionPlaceholder": {
+    "message": "Над чим ви працюєте?"
+  },
+  "noProject": {
+    "message": "Без проєкту"
+  },
+  "untitled": {
+    "message": "Без опису"
+  },
+  "start": {
+    "message": "Запустити таймер"
+  },
+  "stop": {
+    "message": "Зупинити таймер"
+  },
+  "save": {
+    "message": "Зберегти"
+  },
+  "discard": {
+    "message": "Відхилити таймер"
+  },
+  "client": {
+    "message": "Клієнт · Фільтр"
+  },
+  "project": {
+    "message": "Проєкт"
+  },
+  "task": {
+    "message": "Завдання"
+  },
+  "billable": {
+    "message": "До виставлення рахунку"
+  },
+  "searchClients": {
+    "message": "Пошук клієнта…"
+  },
+  "searchProjects": {
+    "message": "Пошук..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Наступна"
+  },
+  "refresh": {
+    "message": "Оновити"
+  },
+  "dropDraft": {
+    "message": "Видалити"
+  },
+  "archived": {
+    "message": "Неактивний"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Підключити Fin3000"
+  },
+  "disconnect": {
+    "message": "Від’єднати"
+  },
+  "connecting": {
+    "message": "Відкривається підключення до Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Підключення скасовано."
+  },
+  "checking": {
+    "message": "Отримання перевіряється. Не надсилайте повторно."
+  },
+  "busy": {
+    "message": "Зачекайте …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Запускайте й зупиняйте час у браузері та призначайте його клієнтам і проєктам."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Запустити таймер"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Доступ заборонено"
+  },
+  "configuration": {
+    "message": "Оновіть розширення, перш ніж продовжити."
+  },
+  "serverError": {
+    "message": "Сталася непередбачена помилка"
+  },
+  "invalidInput": {
+    "message": "Недійсне значення"
+  },
+  "refreshFirst": {
+    "message": "Стан ще не підтверджено"
+  },
+  "connectForCapture": {
+    "message": "Підключити облік часу"
+  },
+  "stopQueued": {
+    "message": "Зупинити таймер · Зачекайте …"
+  },
+  "noResults": {
+    "message": "Немає результатів"
+  },
+  "loading": {
+    "message": "Завантаження..."
+  },
+  "clearSelection": {
+    "message": "Скасувати вибір"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Ceangail rianú ama"
+  },
+  "connectBody": {
+    "message": "Tosaigh agus stop d’am sa bhrabhsálaí agus sann é do chliaint agus do thionscadail."
+  },
+  "verifiedNotice": {
+    "message": "Seolann an síneadh oifigiúil Fin3000 téacs na heiliminte roghnaithe mar chur síos. Ní léann sé ach d’amadóir agus na cliaint agus tionscadail cheadaithe."
+  },
+  "scope": {
+    "message": "D’am féin a léamh, a thosú, a chur in eagar, a stopadh agus a chaitheamh amach"
+  },
+  "permissionDenied": {
+    "message": "Níl an cead riachtanach agat le haghaidh rianú ama."
+  },
+  "running": {
+    "message": "Amadóir ag rith"
+  },
+  "idle": {
+    "message": "Níl aon amadóir ag rith"
+  },
+  "manualCapture": {
+    "message": "Ní féidir an eilimint seo a ghabháil. Cuir an cur síos isteach de láimh."
+  },
+  "dirtyStop": {
+    "message": "Taifeadann Stop na luachanna sábháilte. Fanann athruithe gan sábháil mar dhréacht."
+  },
+  "taskCleared": {
+    "message": "Baintear an tasc roimhe seo nuair a athraítear an tionscadal."
+  },
+  "recoveryTitle": {
+    "message": "Dréacht gan sábháil"
+  },
+  "discardConfirm": {
+    "message": "Caith an t-amadóir seo amach? Ní chruthófar aon iontráil ama."
+  },
+  "confirmed": {
+    "message": "Gníomh an amadóra deimhnithe."
+  },
+  "conflict": {
+    "message": "Athraíodh an t-amadóir. Athnuaigh agus seiceáil a staid reatha."
+  },
+  "expiredAction": {
+    "message": "Tá an gníomh seo imithe in éag. Seiceáil an t-amadóir sula dtosaíonn tú gníomh nua."
+  },
+  "longTimer": {
+    "message": "Taifeadadh níos mó ná 24 uair. Seiceáil an iontráil in Fin3000."
+  },
+  "updateRequired": {
+    "message": "Nuashonraigh an síneadh sula leanann tú ar aghaidh."
+  },
+  "storageError": {
+    "message": "Níl an stóras áitiúil ar fáil. Oscail an síneadh arís."
+  },
+  "rateLimited": {
+    "message": "Fan agus athnuaigh an stádas níos déanaí."
+  },
+  "connectAgain": {
+    "message": "Ceangail an síneadh arís. Leanann amadóir atá ag rith ar aghaidh."
+  },
+  "captureReady": {
+    "message": "Tá an téacs roghnaithe réidh. Seiceáil an duine agus tosaigh go sainráite."
+  },
+  "disconnected": {
+    "message": "Dícheangailte. Leanann amadóir atá ag rith ar aghaidh."
+  },
+  "stale": {
+    "message": "Staid gan deimhniú fós"
+  },
+  "synced": {
+    "message": "Nuashonraithe"
+  },
+  "timeTracking": {
+    "message": "Taifeadadh ama"
+  },
+  "description": {
+    "message": "Cur síos"
+  },
+  "descriptionPlaceholder": {
+    "message": "Cad air a bhfuil tú ag obair?"
+  },
+  "noProject": {
+    "message": "Gan tionscadal"
+  },
+  "untitled": {
+    "message": "Gan cur síos"
+  },
+  "start": {
+    "message": "Tosaigh an t-uaireadóir"
+  },
+  "stop": {
+    "message": "Stop an t-uaireadóir"
+  },
+  "save": {
+    "message": "Sábháil"
+  },
+  "discard": {
+    "message": "Caith an t-uaireadóir amach"
+  },
+  "client": {
+    "message": "Custaiméir · Scagaire"
+  },
+  "project": {
+    "message": "Tionscadal"
+  },
+  "task": {
+    "message": "Tasc"
+  },
+  "billable": {
+    "message": "Inbhilleáilte"
+  },
+  "searchClients": {
+    "message": "Cuardaigh custaiméir…"
+  },
+  "searchProjects": {
+    "message": "Cuardaigh..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Ar aghaidh"
+  },
+  "refresh": {
+    "message": "Nuashonraigh"
+  },
+  "dropDraft": {
+    "message": "Scrios"
+  },
+  "archived": {
+    "message": "Neamhghníomhach"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Ceangail le Fin3000"
+  },
+  "disconnect": {
+    "message": "Dícheangail"
+  },
+  "connecting": {
+    "message": "Ceangal Fin3000 á oscailt …"
+  },
+  "connectionCancelled": {
+    "message": "Cealaíodh an ceangal."
+  },
+  "checking": {
+    "message": "Tá an glacadh á sheiceáil. Ná seol arís é."
+  },
+  "busy": {
+    "message": "Fan le do thoil …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Tosaigh agus stop d’am sa bhrabhsálaí agus sann é do chliaint agus do thionscadail."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Tosaigh an t-uaireadóir"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Rochtain diúltaithe"
+  },
+  "configuration": {
+    "message": "Nuashonraigh an síneadh sula leanann tú ar aghaidh."
+  },
+  "serverError": {
+    "message": "Tharla earráid gan choinne"
+  },
+  "invalidInput": {
+    "message": "Luach neamhbhailí"
+  },
+  "refreshFirst": {
+    "message": "Staid gan deimhniú fós"
+  },
+  "connectForCapture": {
+    "message": "Ceangail rianú ama"
+  },
+  "stopQueued": {
+    "message": "Stop an t-uaireadóir · Fan le do thoil …"
+  },
+  "noResults": {
+    "message": "Níl aon toradh ann"
+  },
+  "loading": {
+    "message": "Á lódáil..."
+  },
+  "clearSelection": {
+    "message": "Bánaigh an rogha"
+  }
+}

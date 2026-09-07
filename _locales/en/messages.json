@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Connect time tracking"
+  },
+  "connectBody": {
+    "message": "Start and stop your time in the browser and assign it to clients and projects."
+  },
+  "verifiedNotice": {
+    "message": "The official Fin3000 extension sends explicitly selected element text as a description. It reads only your timer and permitted clients and projects."
+  },
+  "scope": {
+    "message": "Read, start, edit, stop and discard your own time"
+  },
+  "permissionDenied": {
+    "message": "You do not have the required time tracking permission."
+  },
+  "running": {
+    "message": "Timer running"
+  },
+  "idle": {
+    "message": "No timer running"
+  },
+  "manualCapture": {
+    "message": "This element cannot be captured. Enter the description manually."
+  },
+  "dirtyStop": {
+    "message": "Stop records the saved values. Unsaved changes remain as a draft."
+  },
+  "taskCleared": {
+    "message": "Changing the project removes the previous task."
+  },
+  "recoveryTitle": {
+    "message": "Unsaved draft"
+  },
+  "discardConfirm": {
+    "message": "Discard this timer? No time entry will be created."
+  },
+  "confirmed": {
+    "message": "Timer action confirmed."
+  },
+  "conflict": {
+    "message": "The timer changed in the meantime. Refresh and check its current state."
+  },
+  "expiredAction": {
+    "message": "This action expired. Check the current timer before starting a new action."
+  },
+  "longTimer": {
+    "message": "More than 24 hours recorded. Please check the entry in Fin3000."
+  },
+  "updateRequired": {
+    "message": "Update the extension before continuing."
+  },
+  "storageError": {
+    "message": "Local storage is unavailable. Reopen the extension."
+  },
+  "rateLimited": {
+    "message": "Please wait and refresh the status later."
+  },
+  "connectAgain": {
+    "message": "Reconnect the extension. A running timer keeps running."
+  },
+  "captureReady": {
+    "message": "The selected text is ready. Check the person and start explicitly."
+  },
+  "disconnected": {
+    "message": "Disconnected. A running timer keeps running."
+  },
+  "stale": {
+    "message": "State not yet confirmed"
+  },
+  "synced": {
+    "message": "Updated"
+  },
+  "timeTracking": {
+    "message": "Time tracking"
+  },
+  "description": {
+    "message": "Description"
+  },
+  "descriptionPlaceholder": {
+    "message": "What are you working on?"
+  },
+  "noProject": {
+    "message": "No project"
+  },
+  "untitled": {
+    "message": "No description"
+  },
+  "start": {
+    "message": "Start timer"
+  },
+  "stop": {
+    "message": "Stop timer"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "discard": {
+    "message": "Discard timer"
+  },
+  "client": {
+    "message": "Client · Filter"
+  },
+  "project": {
+    "message": "Project"
+  },
+  "task": {
+    "message": "Task"
+  },
+  "billable": {
+    "message": "Billable"
+  },
+  "searchClients": {
+    "message": "Search client…"
+  },
+  "searchProjects": {
+    "message": "Search..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Next"
+  },
+  "refresh": {
+    "message": "Refresh"
+  },
+  "dropDraft": {
+    "message": "Delete"
+  },
+  "archived": {
+    "message": "Inactive"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Connect to Fin3000"
+  },
+  "disconnect": {
+    "message": "Disconnect"
+  },
+  "connecting": {
+    "message": "Opening the Fin3000 connection …"
+  },
+  "connectionCancelled": {
+    "message": "Connection was cancelled."
+  },
+  "checking": {
+    "message": "Receipt is being checked. Please do not send again."
+  },
+  "busy": {
+    "message": "Please wait …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Start and stop your time in the browser and assign it to clients and projects."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Start timer"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Access denied"
+  },
+  "configuration": {
+    "message": "Update the extension before continuing."
+  },
+  "serverError": {
+    "message": "An unexpected error occurred"
+  },
+  "invalidInput": {
+    "message": "Invalid value"
+  },
+  "refreshFirst": {
+    "message": "State not yet confirmed"
+  },
+  "connectForCapture": {
+    "message": "Connect time tracking"
+  },
+  "stopQueued": {
+    "message": "Stop timer · Please wait …"
+  },
+  "noResults": {
+    "message": "No results"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "clearSelection": {
+    "message": "Clear selection"
+  }
+}

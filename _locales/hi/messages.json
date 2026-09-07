@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "समय ट्रैकिंग जोड़ें"
+  },
+  "connectBody": {
+    "message": "ब्राउज़र में अपना समय शुरू और बंद करें और उसे ग्राहकों तथा प्रोजेक्ट से जोड़ें।"
+  },
+  "verifiedNotice": {
+    "message": "आधिकारिक Fin3000 एक्सटेंशन चुने गए तत्व का टेक्स्ट विवरण के रूप में भेजता है। यह केवल आपका टाइमर और अनुमति प्राप्त ग्राहक तथा प्रोजेक्ट पढ़ता है।"
+  },
+  "scope": {
+    "message": "अपना समय पढ़ना, शुरू करना, संपादित करना, रोकना और रद्द करना"
+  },
+  "permissionDenied": {
+    "message": "आपके पास समय ट्रैकिंग की आवश्यक अनुमति नहीं है।"
+  },
+  "running": {
+    "message": "टाइमर चल रहा है"
+  },
+  "idle": {
+    "message": "कोई टाइमर नहीं चल रहा"
+  },
+  "manualCapture": {
+    "message": "यह तत्व नहीं लिया जा सकता। विवरण स्वयं दर्ज करें।"
+  },
+  "dirtyStop": {
+    "message": "रोकने पर सहेजे गए मान दर्ज होते हैं। बिना सहेजे बदलाव ड्राफ्ट में रहते हैं।"
+  },
+  "taskCleared": {
+    "message": "प्रोजेक्ट बदलने पर पिछला कार्य हट जाएगा।"
+  },
+  "recoveryTitle": {
+    "message": "बिना सहेजा ड्राफ्ट"
+  },
+  "discardConfirm": {
+    "message": "यह टाइमर रद्द करें? समय की कोई प्रविष्टि नहीं बनेगी।"
+  },
+  "confirmed": {
+    "message": "टाइमर कार्रवाई की पुष्टि हो गई।"
+  },
+  "conflict": {
+    "message": "इस बीच टाइमर बदल गया है। रीफ़्रेश करके वर्तमान स्थिति जाँचें।"
+  },
+  "expiredAction": {
+    "message": "इस कार्रवाई की अवधि समाप्त हो गई। नई कार्रवाई से पहले वर्तमान टाइमर जाँचें।"
+  },
+  "longTimer": {
+    "message": "24 घंटे से अधिक दर्ज हुए हैं। Fin3000 में प्रविष्टि जाँचें।"
+  },
+  "updateRequired": {
+    "message": "आगे बढ़ने से पहले एक्सटेंशन अपडेट करें।"
+  },
+  "storageError": {
+    "message": "स्थानीय स्टोरेज उपलब्ध नहीं है। एक्सटेंशन फिर से खोलें।"
+  },
+  "rateLimited": {
+    "message": "प्रतीक्षा करें और बाद में स्थिति रीफ़्रेश करें।"
+  },
+  "connectAgain": {
+    "message": "एक्सटेंशन फिर से जोड़ें। चालू टाइमर चलता रहेगा।"
+  },
+  "captureReady": {
+    "message": "चुना गया टेक्स्ट तैयार है। व्यक्ति जाँचें और स्वयं शुरू करें।"
+  },
+  "disconnected": {
+    "message": "कनेक्शन हट गया। चालू टाइमर चलता रहेगा।"
+  },
+  "stale": {
+    "message": "स्थिति की अभी पुष्टि नहीं हुई"
+  },
+  "synced": {
+    "message": "अपडेट किया गया"
+  },
+  "timeTracking": {
+    "message": "समय ट्रैकिंग"
+  },
+  "description": {
+    "message": "विवरण"
+  },
+  "descriptionPlaceholder": {
+    "message": "आप किस पर काम कर रहे हैं?"
+  },
+  "noProject": {
+    "message": "बिना परियोजना"
+  },
+  "untitled": {
+    "message": "बिना विवरण"
+  },
+  "start": {
+    "message": "टाइमर आरंभ करें"
+  },
+  "stop": {
+    "message": "टाइमर रोकें"
+  },
+  "save": {
+    "message": "सहेजें"
+  },
+  "discard": {
+    "message": "टाइमर हटाएँ"
+  },
+  "client": {
+    "message": "ग्राहक · फ़िल्टर"
+  },
+  "project": {
+    "message": "परियोजना"
+  },
+  "task": {
+    "message": "कार्य"
+  },
+  "billable": {
+    "message": "बिल योग्य"
+  },
+  "searchClients": {
+    "message": "ग्राहक खोजें…"
+  },
+  "searchProjects": {
+    "message": "खोजें..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "अगला"
+  },
+  "refresh": {
+    "message": "अद्यतन करें"
+  },
+  "dropDraft": {
+    "message": "हटाएँ"
+  },
+  "archived": {
+    "message": "निष्क्रिय"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Fin3000 से कनेक्ट करें"
+  },
+  "disconnect": {
+    "message": "कनेक्शन हटाएँ"
+  },
+  "connecting": {
+    "message": "Fin3000 कनेक्शन खोला जा रहा है …"
+  },
+  "connectionCancelled": {
+    "message": "कनेक्शन रद्द कर दिया गया।"
+  },
+  "checking": {
+    "message": "प्राप्ति की जाँच हो रही है। कृपया दोबारा न भेजें।"
+  },
+  "busy": {
+    "message": "कृपया प्रतीक्षा करें …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "ब्राउज़र में अपना समय शुरू और बंद करें और उसे ग्राहकों तथा प्रोजेक्ट से जोड़ें।"
+  },
+  "menuStart": {
+    "message": "Fin3000 · टाइमर आरंभ करें"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "पहुँच अस्वीकृत"
+  },
+  "configuration": {
+    "message": "आगे बढ़ने से पहले एक्सटेंशन अपडेट करें।"
+  },
+  "serverError": {
+    "message": "एक अप्रत्याशित त्रुटि हुई"
+  },
+  "invalidInput": {
+    "message": "अमान्य मान"
+  },
+  "refreshFirst": {
+    "message": "स्थिति की अभी पुष्टि नहीं हुई"
+  },
+  "connectForCapture": {
+    "message": "समय ट्रैकिंग जोड़ें"
+  },
+  "stopQueued": {
+    "message": "टाइमर रोकें · कृपया प्रतीक्षा करें …"
+  },
+  "noResults": {
+    "message": "कोई परिणाम नहीं"
+  },
+  "loading": {
+    "message": "लोड हो रहा है..."
+  },
+  "clearSelection": {
+    "message": "चयन हटाएँ"
+  }
+}

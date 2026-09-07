@@ -1,0 +1,37 @@
+{
+  "name": "@fin3000/firefox-timetracker",
+  "version": "0.19.0",
+  "private": true,
+  "description": "Fin3000 Firefox time tracking extension with context menu and toolbar timer",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ideal3000-library/fin3000-firefox-timetracker.git"
+  },
+  "scripts": {
+    "build": "node scripts/build-timer-extension.mjs --profile production",
+    "build:qa": "node scripts/build-timer-extension.mjs --profile qa",
+    "typecheck": "node scripts/timer-extension-cli.mjs typecheck",
+    "test": "node scripts/timer-extension-cli.mjs test",
+    "doctor": "node scripts/doctor-timer-extension.mjs",
+    "inspect": "node scripts/inspect-timer-extension.mjs",
+    "repro": "node scripts/timer-extension-repro.mjs --profile production",
+    "smoke:firefox": "node scripts/timer-extension-firefox-smoke.mjs",
+    "timer-extension:doctor": "node scripts/doctor-timer-extension.mjs",
+    "timer-extension:typecheck": "node scripts/timer-extension-cli.mjs typecheck",
+    "timer-extension:test": "node scripts/timer-extension-cli.mjs test",
+    "timer-extension:build:qa": "node scripts/build-timer-extension.mjs --profile qa",
+    "timer-extension:build:production": "node scripts/build-timer-extension.mjs --profile production",
+    "timer-extension:inspect": "node scripts/inspect-timer-extension.mjs",
+    "timer-extension:repro:qa": "node scripts/timer-extension-repro.mjs --profile qa",
+    "timer-extension:smoke:firefox": "node scripts/timer-extension-firefox-smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.60.0",
+    "typescript": "6.0.3"
+  }
+}

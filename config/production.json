@@ -1,0 +1,11 @@
+{
+  "$schema": "./schema.json",
+  "profile": "production",
+  "profileVersion": 1,
+  "protocolVersion": 1,
+  "extensionId": "timetracker@fin3000.com",
+  "oauthClientId": "fin3000-firefox-timer",
+  "redirectUri": "https://a086c2adfc379a0f654784b1eb316305e2a29c10.extensions.allizom.org/",
+  "apiOrigin": "https://api.fin3000.com",
+  "frontendOrigin": "https://app.fin3000.com"
+}

@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Tijdregistratie verbinden"
+  },
+  "connectBody": {
+    "message": "Start en stop je tijd in de browser en wijs deze toe aan klanten en projecten."
+  },
+  "verifiedNotice": {
+    "message": "De officiële Fin3000-extensie verstuurt de bewust gekozen elementtekst als beschrijving. Ze leest alleen je timer en toegestane klanten en projecten."
+  },
+  "scope": {
+    "message": "Je eigen tijd lezen, starten, bewerken, stoppen en verwerpen"
+  },
+  "permissionDenied": {
+    "message": "Je hebt niet de vereiste toestemming voor tijdregistratie."
+  },
+  "running": {
+    "message": "Timer loopt"
+  },
+  "idle": {
+    "message": "Geen timer actief"
+  },
+  "manualCapture": {
+    "message": "Dit element kan niet worden overgenomen. Voer de beschrijving handmatig in."
+  },
+  "dirtyStop": {
+    "message": "Stoppen registreert de opgeslagen waarden. Niet-opgeslagen wijzigingen blijven als concept bewaard."
+  },
+  "taskCleared": {
+    "message": "Bij een ander project wordt de vorige taak verwijderd."
+  },
+  "recoveryTitle": {
+    "message": "Niet-opgeslagen concept"
+  },
+  "discardConfirm": {
+    "message": "Deze timer verwerpen? Er wordt geen tijdregistratie gemaakt."
+  },
+  "confirmed": {
+    "message": "Timeractie bevestigd."
+  },
+  "conflict": {
+    "message": "De timer is intussen gewijzigd. Vernieuw en controleer de huidige status."
+  },
+  "expiredAction": {
+    "message": "Deze actie is verlopen. Controleer de timer voordat je een nieuwe actie start."
+  },
+  "longTimer": {
+    "message": "Meer dan 24 uur geregistreerd. Controleer de registratie in Fin3000."
+  },
+  "updateRequired": {
+    "message": "Werk de extensie bij voordat je doorgaat."
+  },
+  "storageError": {
+    "message": "Lokale opslag is niet beschikbaar. Open de extensie opnieuw."
+  },
+  "rateLimited": {
+    "message": "Wacht en vernieuw de status later."
+  },
+  "connectAgain": {
+    "message": "Verbind de extensie opnieuw. Een actieve timer blijft lopen."
+  },
+  "captureReady": {
+    "message": "De geselecteerde tekst staat klaar. Controleer de persoon en start bewust."
+  },
+  "disconnected": {
+    "message": "Verbinding verbroken. Een actieve timer blijft lopen."
+  },
+  "stale": {
+    "message": "Status nog niet bevestigd"
+  },
+  "synced": {
+    "message": "Bijgewerkt"
+  },
+  "timeTracking": {
+    "message": "Urenregistratie"
+  },
+  "description": {
+    "message": "Beschrijving"
+  },
+  "descriptionPlaceholder": {
+    "message": "Waar werk je aan?"
+  },
+  "noProject": {
+    "message": "Zonder project"
+  },
+  "untitled": {
+    "message": "Zonder beschrijving"
+  },
+  "start": {
+    "message": "Timer starten"
+  },
+  "stop": {
+    "message": "Timer stoppen"
+  },
+  "save": {
+    "message": "Opslaan"
+  },
+  "discard": {
+    "message": "Timer verwerpen"
+  },
+  "client": {
+    "message": "Klant · Filter"
+  },
+  "project": {
+    "message": "Project"
+  },
+  "task": {
+    "message": "Taak"
+  },
+  "billable": {
+    "message": "Factureerbaar"
+  },
+  "searchClients": {
+    "message": "Klant zoeken…"
+  },
+  "searchProjects": {
+    "message": "Zoeken..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Volgende"
+  },
+  "refresh": {
+    "message": "Vernieuwen"
+  },
+  "dropDraft": {
+    "message": "Verwijderen"
+  },
+  "archived": {
+    "message": "Inactief"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Verbinden met Fin3000"
+  },
+  "disconnect": {
+    "message": "Verbinding verbreken"
+  },
+  "connecting": {
+    "message": "Fin3000-verbinding wordt geopend …"
+  },
+  "connectionCancelled": {
+    "message": "De verbinding is geannuleerd."
+  },
+  "checking": {
+    "message": "De ontvangst wordt gecontroleerd. Verstuur niet opnieuw."
+  },
+  "busy": {
+    "message": "Even geduld …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Start en stop je tijd in de browser en wijs deze toe aan klanten en projecten."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Timer starten"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Toegang geweigerd"
+  },
+  "configuration": {
+    "message": "Werk de extensie bij voordat je doorgaat."
+  },
+  "serverError": {
+    "message": "Er is een onverwachte fout opgetreden"
+  },
+  "invalidInput": {
+    "message": "Ongeldige waarde"
+  },
+  "refreshFirst": {
+    "message": "Status nog niet bevestigd"
+  },
+  "connectForCapture": {
+    "message": "Tijdregistratie verbinden"
+  },
+  "stopQueued": {
+    "message": "Timer stoppen · Even geduld …"
+  },
+  "noResults": {
+    "message": "Geen resultaten"
+  },
+  "loading": {
+    "message": "Bezig met laden..."
+  },
+  "clearSelection": {
+    "message": "Selectie opheffen"
+  }
+}
