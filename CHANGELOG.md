@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Rename the repository to fin3000-browser-timetracker and the npm package to @fin3000/browser-timetracker to reflect the shared browser extension.
+
 ### Added
 
 - Independent Firefox time tracker repository, extracted from fin3000-frontend commit f64f9a14: context-menu capture, toolbar timer, searchable client/project selection, OAuth PKCE, 26 languages and native Firefox QA tooling.
