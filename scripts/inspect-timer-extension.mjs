@@ -3,6 +3,8 @@ import path from 'node:path';
 import { canonicalJson, productLocales } from './build-utils.mjs';
 import {
   repoRoot,
+  edgeIdentity,
+  artifactDirectory,
   loadTimerProfile,
   firefoxHostPattern,
   runCli,
@@ -21,8 +23,8 @@ async function files(root, prefix = '') {
   }
   return result.sort();
 }
-export async function inspectTimer(unpacked, profile = 'qa') {
-  const config = await loadTimerProfile(profile);
+export async function inspectTimer(unpacked, profile = 'qa', browser = 'firefox') {
+  const config = await loadTimerProfile(profile, browser);
   const builtConfig = JSON.parse(await readFile(path.join(unpacked, 'config.json'), 'utf8'));
   if (canonicalJson(builtConfig) !== canonicalJson(config))
     throw timerError(
@@ -31,30 +33,16 @@ export async function inspectTimer(unpacked, profile = 'qa') {
       4,
     );
   const manifest = JSON.parse(await readFile(path.join(unpacked, 'manifest.json'), 'utf8'));
-  const permissions = ['activeTab', 'scripting', 'menus', 'identity', 'alarms', 'notifications'];
-  if (
-    manifest.manifest_version !== 3 ||
-    manifest.version !== config.extensionVersion ||
-    manifest.incognito !== 'not_allowed' ||
-    canonicalJson(manifest.permissions) !== canonicalJson(permissions) ||
-    canonicalJson(manifest.host_permissions) !==
-      canonicalJson([firefoxHostPattern(config.apiOrigin)]) ||
-    canonicalJson(manifest.background) !==
-      canonicalJson({ scripts: ['src/background.js'], type: 'module' }) ||
-    manifest.browser_specific_settings?.gecko?.id !== config.extensionId ||
-    manifest.browser_specific_settings.gecko.strict_min_version !== '140.0' ||
-    canonicalJson(manifest.browser_specific_settings.gecko.data_collection_permissions) !==
-      canonicalJson({ required: ['authenticationInfo', 'websiteContent'] }) ||
-    [
-      'content_scripts',
-      'externally_connectable',
-      'web_accessible_resources',
-      'optional_permissions',
-      'optional_host_permissions',
-    ].some((key) => key in manifest)
-  )
-    throw timerError('ARTIFACT_INVALID', 'Manifest verletzt den Firefox-Vertrag.', 4);
+  const edge = browser === 'edge';
+  const template = JSON.parse((await readFile(path.join(repoRoot, `manifest.${browser}.template.json`), 'utf8'))
+    .replaceAll('__EXTENSION_VERSION__', config.extensionVersion)
+    .replaceAll('__EXTENSION_ID__', config.extensionId)
+    .replaceAll('__API_ORIGIN__/*', firefoxHostPattern(config.apiOrigin))
+    .replaceAll('__EDGE_PUBLIC_KEY__', edge ? (await edgeIdentity(profile)).key : ''));
+  if (canonicalJson(manifest) !== canonicalJson(template))
+    throw timerError('ARTIFACT_INVALID', `Manifest verletzt den ${browser}-Vertrag.`, 4);
   const expected = [
+    ...(edge ? ['src/edge-content.js'] : []),
     'manifest.json',
     'config.json',
     'popup.html',
@@ -98,16 +86,17 @@ export async function inspectTimer(unpacked, profile = 'qa') {
     status: 'PASS',
     files: expected.length,
     locales: productLocales.length,
-    distribution: 'unsigned-firefox-xpi',
+    distribution: edge ? 'edge-unpacked-zip' : 'unsigned-firefox-xpi',
   };
 }
 if (isMain(import.meta.url))
   await runCli(
     (o) =>
       inspectTimer(
-        o.path || path.join(repoRoot, 'dist/timer-extension', o.profile, 'unpacked'),
+        o.path || path.join(artifactDirectory(o.profile, o.browser), 'unpacked'),
         o.profile,
+        o.browser,
       ),
-    'Inspect Firefox timer artifact. --profile qa|production [--path unpacked-directory] [--json] [--help]',
+    'Inspect browser timer artifact. --browser firefox|edge. --profile qa|production [--path unpacked-directory] [--json] [--help]',
     ['--path'],
   );

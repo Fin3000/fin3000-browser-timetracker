@@ -7,6 +7,15 @@ konfigurierte Fin3000-API. HTML, Seiten-URLs, Cookies, Formularwerte und Inhalte
 anderer Tabs werden nicht übertragen. Auf geschützten Seiten erfolgt keine
 automatische Zeiterfassung; die Beschreibung kann manuell eingegeben werden.
 
+Firefox nutzt temporären Zugriff auf den angeklickten Tab. Edge benötigt den
+bestätigten Zugriff auf gewöhnliche HTTP(S)-Webseiten: ein isoliertes Skript
+merkt sich für höchstens zwei Minuten nur die angeklickte Knotenreferenz.
+Es liest und überträgt vor der Fin3000-Menüaktion keinen Text oder HTML.
+Navigation, weitere Pointer-/Tastatureingaben und Verbrauch verwerfen die
+Referenz. Ohne verfügbare Referenz bleibt die manuelle Beschreibung.
+Ein angemeldeter Startwunsch wird für maximal eine Minute lokal gespeichert,
+bis der Serverzustand bestätigt und die eigentliche Timeraktion angenommen ist.
+
 Fin3000 liefert den eigenen laufenden Timer sowie die gemäß den aktuellen
 Benutzerrechten zugänglichen Kunden und Projekte. Kunden sind ein Projektfilter;
 die Zuordnung ergibt sich aus dem gewählten Projekt. Starten, Bearbeiten, Stoppen

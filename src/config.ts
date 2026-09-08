@@ -23,15 +23,14 @@ export function validateConfig(raw: unknown): TimerConfig {
     throw new Error('configuration');
   const prod = c.profile === 'production';
   if (!prod && c.profile !== 'qa') throw new Error('configuration');
-  if (
-    c.extensionId !== (prod ? 'timetracker@fin3000.com' : 'timetracker-qa@fin3000.com') ||
-    c.oauthClientId !== (prod ? 'fin3000-firefox-timer' : 'fin3000-firefox-timer-qa')
-  )
-    throw new Error('configuration');
-  const redirect = prod
-    ? 'a086c2adfc379a0f654784b1eb316305e2a29c10'
-    : '2ace9a4a44792c4b2d137142c71c42591e8365fd';
-  if (c.redirectUri !== `https://${redirect}.extensions.allizom.org/`)
+  const edge = c.oauthClientId === (prod ? 'fin3000-edge-timer' : 'fin3000-edge-timer-qa');
+  const extensionId = edge
+    ? (prod ? 'mefjglidfjkjajheckkgnlhleldpddmo' : 'dmajiladcmjicohaacjjiklgjcaihlbk')
+    : (prod ? 'timetracker@fin3000.com' : 'timetracker-qa@fin3000.com');
+  const firefoxDigest = prod ? 'a086c2adfc379a0f654784b1eb316305e2a29c10' : '2ace9a4a44792c4b2d137142c71c42591e8365fd';
+  if (c.extensionId !== extensionId ||
+      c.oauthClientId !== (edge ? 'fin3000-edge-timer' : 'fin3000-firefox-timer') + (prod ? '' : '-qa') ||
+      c.redirectUri !== (edge ? `https://${extensionId}.chromiumapp.org/` : `https://${firefoxDigest}.extensions.allizom.org/`))
     throw new Error('configuration');
   for (const key of ['apiOrigin', 'frontendOrigin'] as const) {
     const url = new URL(c[key]);

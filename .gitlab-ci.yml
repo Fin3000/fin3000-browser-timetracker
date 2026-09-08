@@ -26,8 +26,12 @@ verify-extension:
     - QA_SLUG=timer-ci npm run timer-extension:repro:qa
     - npm run repro
     - npm run build
+    - QA_SLUG=timer-ci npm run repro -- --browser edge --profile qa
+    - npm run repro:edge
+    - npm run build:edge
   artifacts:
     paths:
       - dist/timer-extension/production/*.xpi
+      - dist/timer-extension/edge/production/*.zip
     expire_in: 1 week
-  # Native Firefox installation/restart QA runs separately with disposable profiles.
+  # Native Firefox/Edge installation/restart QA runs separately with disposable profiles.

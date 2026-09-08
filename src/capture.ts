@@ -1,6 +1,7 @@
 /** Serialized into the exact user-clicked frame; deliberately closure-free. */
-export function captureTarget(targetElementId: number): string | null {
-  const target = browser.menus.getTargetElement(targetElementId);
+export function captureTarget(targetElementId: number | Element): string | null {
+  const target = typeof targetElementId === 'number'
+    ? browser.menus.getTargetElement(targetElementId) : targetElementId;
   if (!target || !target.isConnected || target.ownerDocument !== document) return null;
   const excluded =
     'input,textarea,select,option,button,[contenteditable]:not([contenteditable="false"]),script,style,template,noscript';

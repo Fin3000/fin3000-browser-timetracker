@@ -4,6 +4,7 @@ import { badgeText, TimerCoordinator } from './coordinator.js';
 import type { UIMessage } from './types.js';
 
 const MENU = 'fin3000-start-timer';
+const menus = browser.menus || browser.contextMenus!;
 const instance = loadConfig().then((config) => ({
   config,
   coordinator: new TimerCoordinator(config),
@@ -92,8 +93,8 @@ async function refreshBadge(): Promise<void> {
   }
 }
 async function setup(): Promise<void> {
-  await browser.menus.removeAll();
-  browser.menus.create({
+  await menus.removeAll();
+  menus.create({
     id: MENU,
     title: browser.i18n.getMessage('menuStart'),
     contexts: ['all'],
@@ -116,20 +117,23 @@ browser.alarms.onAlarm.addListener((alarm) => {
       await refreshBadge();
     });
 });
-browser.menus.onClicked.addListener((info, tab) => {
+menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId !== MENU || tab?.incognito) return;
-  // Start capture immediately while activeTab and the target handle are valid.
-  const capture =
-    tab?.id !== undefined && info.targetElementId !== undefined
-      ? browser.scripting
-          .executeScript({
-            target: { tabId: tab.id, frameIds: [info.frameId || 0] },
-            func: captureTarget,
-            args: [info.targetElementId],
-          })
-          .then((results) => results.find((r) => r.frameId === (info.frameId || 0))?.result || null)
+  // Preserve the menu gesture before any storage or network await.
+  void browser.action.openPopup().catch(() => undefined);
+  const frameId = info.frameId || 0;
+  const url = info.frameUrl || info.pageUrl || tab?.url || '';
+  const capture = tab?.id === undefined || !/^https?:\/\//.test(url)
+    ? Promise.resolve(null)
+    : browser.menus
+      ? info.targetElementId === undefined ? Promise.resolve(null) : browser.scripting
+          .executeScript({ target: { tabId: tab.id, frameIds: [frameId] },
+            func: captureTarget, args: [info.targetElementId] })
+          .then((results) => results.find((r) => r.frameId === frameId)?.result || null)
           .catch(() => null)
-      : Promise.resolve(null);
+      : browser.tabs.sendMessage(tab.id, { type: 'fin3000.capture' }, { frameId })
+          .then((result) => typeof result === 'string' && Array.from(result).length <= 500 ? result : null)
+          .catch(() => null);
   void (async () => {
     const { coordinator } = await instance;
     try {
@@ -140,7 +144,6 @@ browser.menus.onClicked.addListener((info, tab) => {
       );
     }
     await refreshBadge();
-    await browser.action.openPopup().catch(() => undefined);
   })();
 });
 browser.runtime.onMessage.addListener((raw, sender) => {

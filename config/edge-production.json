@@ -1,0 +1,11 @@
+{
+  "$schema": "./schema.json",
+  "profile": "production",
+  "profileVersion": 1,
+  "protocolVersion": 1,
+  "extensionId": "mefjglidfjkjajheckkgnlhleldpddmo",
+  "oauthClientId": "fin3000-edge-timer",
+  "redirectUri": "https://mefjglidfjkjajheckkgnlhleldpddmo.chromiumapp.org/",
+  "apiOrigin": "https://api.fin3000.com",
+  "frontendOrigin": "https://app.fin3000.com"
+}

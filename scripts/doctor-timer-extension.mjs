@@ -9,8 +9,8 @@ import {
   timerError,
 } from './timer-extension-cli.mjs';
 
-export async function doctorTimer(profile = 'qa') {
-  const config = await loadTimerProfile(profile);
+export async function doctorTimer(profile = 'qa', browser = 'firefox') {
+  const config = await loadTimerProfile(profile, browser);
   if (Number(process.versions.node.split('.')[0]) < 22)
     throw timerError('NODE_REQUIRED', 'Node 22 oder neuer erforderlich.', 3);
   try {
@@ -23,7 +23,7 @@ export async function doctorTimer(profile = 'qa') {
   const firefox = process.env.FIN3000_FIREFOX || 'firefox';
   const geckodriver = process.env.FIN3000_GECKODRIVER || 'geckodriver';
   const versions = {};
-  for (const [name, binary] of Object.entries({ firefox, geckodriver })) {
+  for (const [name, binary] of Object.entries(browser === 'edge' ? { edge: process.env.FIN3000_EDGE || 'microsoft-edge-stable' } : { firefox, geckodriver })) {
     const result = spawnSync(binary, ['--version'], { encoding: 'utf8', timeout: 10_000 });
     versions[name] = result.status === 0 ? result.stdout.trim().split('\n')[0] : 'MISSING';
   }
@@ -67,13 +67,13 @@ export async function doctorTimer(profile = 'qa') {
     stack,
     ...versions,
     nativeQa: Object.values(versions).includes('MISSING')
-      ? 'BLOCKED: FIN3000_FIREFOX und FIN3000_GECKODRIVER setzen.'
+      ? browser === 'edge' ? 'BLOCKED: FIN3000_EDGE setzen.' : 'BLOCKED: FIN3000_FIREFOX und FIN3000_GECKODRIVER setzen.'
       : 'AVAILABLE',
-    next: 'npm run timer-extension:build:' + (profile === 'qa' ? 'qa' : 'production'),
+    next: `npm run ${browser === 'edge' ? 'build:edge' : 'build'}${profile === 'qa' ? ':qa' : ''}`,
   };
 }
 if (isMain(import.meta.url))
   await runCli(
-    (o) => doctorTimer(o.profile),
-    'Check local build prerequisites; reports native Firefox QA availability separately. --profile qa|production [--json] [--help]. Binary overrides: FIN3000_FIREFOX, FIN3000_GECKODRIVER.',
+    (o) => doctorTimer(o.profile, o.browser),
+    'Check local build prerequisites; reports native browser QA availability separately. --browser firefox|edge --profile qa|production [--json] [--help]. Binary overrides: FIN3000_FIREFOX, FIN3000_GECKODRIVER.',
   );

@@ -610,3 +610,100 @@ test('built XPI keeps exact permission and file boundaries and rejects contamina
   await writeFile(path.join(result.unpacked, 'unexpected-secret.txt'), 'synthetic');
   await assert.rejects(inspectTimer(result.unpacked, 'qa'), /Prüfung fehlgeschlagen/);
 });
+
+
+test('Edge profiles bind the public key, browser, exact redirect and environment', async () => {
+  const qa = await loadTimerProfile('qa', 'edge');
+  const production = await loadTimerProfile('production', 'edge');
+  assert.equal(validateConfig(qa).extensionId, 'dmajiladcmjicohaacjjiklgjcaihlbk');
+  assert.equal(validateConfig(production).extensionId, 'mefjglidfjkjajheckkgnlhleldpddmo');
+  assert.throws(() => validateConfig({ ...qa, oauthClientId: 'fin3000-firefox-timer-qa' }));
+  assert.throws(() => validateConfig({ ...production, extensionId: qa.extensionId, redirectUri: qa.redirectUri }));
+  assert.throws(() => parseArgs(['--browser', 'safari']));
+  const built = await buildTimer('qa', path.join(temp, 'edge-build'), 'edge');
+  assert.equal(built.inspection.distribution, 'edge-unpacked-zip');
+  const manifestPath = path.join(built.unpacked, 'manifest.json');
+  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  assert.equal(manifest.background.service_worker, 'src/background.js');
+  assert.equal(manifest.content_scripts[0].all_frames, true);
+  const content = await readFile(path.join(built.unpacked, 'src/edge-content.js'), 'utf8');
+  assert.doesNotMatch(content, /^import |^export /m);
+  await writeFile(manifestPath, JSON.stringify({ ...manifest, externally_connectable: { matches: ['https://*/*'] } }));
+  await assert.rejects(inspectTimer(built.unpacked, 'qa', 'edge'));
+});
+
+test('capture intent survives worker loss before sync and is converted atomically to one command', async () => {
+  const h = await harness(false);
+  const blocked = deferred();
+  h.coordinator.api.current = () => blocked.promise;
+  void h.coordinator.capture('Durable right click');
+  await until(() => !!h.read().pendingCapture?.start);
+  const saved = h.read();
+  assert.equal(saved.command, null);
+  validateStoredState(saved);
+  let durable = saved, posts = 0;
+  const restarted = new Coordinator(await loadTimerProfile('qa'), {
+    read: async () => structuredClone(durable),
+    write: async (value) => { durable = structuredClone(value); },
+  });
+  restarted.api = {
+    principal: async () => principal, current: async () => snapshot(false),
+    receipt: async () => null,
+    command: async (command) => { posts++; assert.equal(durable.pendingCapture, null); assert.equal(command.body.fields.description, 'Durable right click'); return result(command); },
+  };
+  await restarted.tick();
+  await until(() => posts === 1 && !durable.command);
+  assert.equal(posts, 1);
+  await h.coordinator.disconnect();
+  blocked.resolve(snapshot(false));
+});
+
+test('expired or superseded capture intent never starts a late timer', async () => {
+  for (const mode of ['expired', 'changed-timer']) {
+    const h = await harness(false), blocked = deferred();
+    h.coordinator.api.current = () => blocked.promise;
+    void h.coordinator.capture('Old action');
+    await until(() => !!h.read().pendingCapture?.start);
+    const saved = h.read();
+    if (mode === 'expired') saved.pendingCapture.expiresAt = Date.now() - 1;
+    const restarted = new Coordinator(await loadTimerProfile('qa'), { read: async () => saved, write: async () => {} });
+    let posts = 0;
+    restarted.api = { principal: async () => principal, current: async () => snapshot(true), receipt: async () => null, command: async () => { posts++; throw new Error('unexpected'); } };
+    await restarted.tick();
+    assert.equal(posts, 0);
+    await h.coordinator.disconnect(); blocked.resolve(snapshot(false));
+  }
+});
+
+
+test('Edge listener reads only after a trusted contextmenu and exact background message', async () => {
+  const built = await buildTimer('qa', path.join(temp, 'edge-capture'), 'edge');
+  const engine = await chromium.launch({ executablePath: process.env.FIN3000_CHROMIUM, args: ['--no-sandbox'] });
+  const page = await engine.newPage();
+  const server = createServer((_req, res) => { res.setHeader('Content-Type', 'text/html'); res.end('<p id="target">Visible <b>title</b><input value="SECRET"><span hidden>HIDDEN</span></p><p id="other">Neighbor</p><input id="password" type="password" value="SECRET">'); });
+  await new Promise((r) => server.listen(0, '127.0.0.1', r));
+  try {
+    await page.goto(`http://127.0.0.1:${server.address().port}`);
+    await page.evaluate(() => {
+      globalThis.browser = { runtime: { id: 'test', getURL: (p) => 'chrome-extension://test/' + p,
+        onMessage: { addListener: (fn) => { globalThis.captureMessage = fn; } } } };
+    });
+    await page.addScriptTag({ path: path.join(built.unpacked, 'src/edge-content.js') });
+    const read = (sender = { id: 'test', url: 'chrome-extension://test/src/background.js' }) => page.evaluate((sender) => globalThis.captureMessage({ type: 'fin3000.capture' }, sender), sender);
+    assert.equal(await read(), null);
+    await page.locator('#target').dispatchEvent('contextmenu');
+    assert.equal(await read(), null, 'synthetic page event cannot capture');
+    await page.locator('#target').click({ button: 'right', position: { x: 4, y: 4 } });
+    assert.equal(await read({ id: 'test', url: 'https://evil.test', tab: { id: 1 } }), undefined);
+    assert.equal(await read(), 'Visible title');
+    assert.equal(await read(), null, 'one-shot consumption');
+    await page.locator('#target').click({ button: 'right', position: { x: 4, y: 4 } });
+    await page.locator('#target').evaluate((node) => node.remove());
+    assert.equal(await read(), null, 'detached node');
+    await page.locator('#other').click({ button: 'right' });
+    await page.keyboard.press('Escape');
+    assert.equal(await read(), null, 'abandoned menu');
+    await page.locator('#password').click({ button: 'right' });
+    assert.equal(await read(), null, 'password field');
+  } finally { await engine.close(); await new Promise((r) => server.close(r)); }
+});

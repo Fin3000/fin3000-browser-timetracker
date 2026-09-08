@@ -58,7 +58,11 @@ export function validateStoredState(raw: unknown): StoredState {
       (typeof s.pendingCapture.text !== 'string' ||
         Array.from(s.pendingCapture.text).length > 500 ||
         !Number.isFinite(s.pendingCapture.expiresAt) ||
-        typeof s.pendingCapture.attemptId !== 'string')) ||
+        typeof s.pendingCapture.attemptId !== 'string' ||
+        (s.pendingCapture.start !== undefined &&
+          (s.pendingCapture.start.subject !== s.principal?.subject ||
+            (s.pendingCapture.start.timerId !== null && !uuid(s.pendingCapture.start.timerId)) ||
+            (s.pendingCapture.start.version !== null && !/^[0-9a-f]{64}$/.test(s.pendingCapture.start.version)))))) ||
     (s.stopIntent !== null &&
       (s.command?.action !== 'update' ||
         s.stopIntent.afterCommandId !== s.command.body.commandId ||

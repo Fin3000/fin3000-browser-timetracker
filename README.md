@@ -1,6 +1,6 @@
-# Fin3000 Firefox-Zeiterfassung
+# Fin3000 Browser-Zeiterfassung
 
-Firefox ab 140: Element per Rechtsklick erfassen, eigene Zeit starten/stoppen,
+Firefox ab 140 und Microsoft Edge ab 152: Element per Rechtsklick erfassen, eigene Zeit starten/stoppen,
 Beschreibung, Projekt und Abrechenbarkeit im Toolbar-Popup bearbeiten.
 Kunden filtern die Projektauswahl; die Kundenzuordnung kommt vom Projekt.
 Das Popup zeigt Account und tatsächlichen Mitarbeiter. Änderungen werden
@@ -82,6 +82,53 @@ Bei Snap-Firefox muss geckodriver im passenden Snap-Kontext laufen; für eine
 separate Mozilla-Installation einen unbeschränkten geckodriver verwenden.
 Der Runner benötigt dessen `--allow-system-access` für native Browser-UI.
 
+## Microsoft Edge installieren und testen
+
+Firefox und Edge verwenden denselben Quellcode und dieselbe Bedienung. Die
+Edge-Variante benötigt Webseitenzugriff für den unmittelbaren Element-Rechtsklick.
+Sie merkt sich beim Rechtsklick kurz das Ziel; erst „Zeit starten“ liest Text.
+
+```bash
+QA_SLUG=edge-timetracker npm run build:edge:qa
+QA_SLUG=edge-timetracker npm run doctor -- --browser edge --json
+QA_SLUG=edge-timetracker npm run inspect -- --browser edge
+```
+
+Den Backend-/Frontend-QA-Stack mit demselben `QA_SLUG=edge-timetracker` starten.
+Edge → `edge://extensions` → Entwicklermodus einschalten → **Entpackte Erweiterung
+laden** → Ordner `dist/timer-extension/edge/qa/unpacked` auswählen. Anschließend
+Fin3000 im Erweiterungsmenü an die Symbolleiste anheften, öffnen und verbinden.
+Das ZIP ist zum Entpacken/Weitergeben; Edge lädt den darin enthaltenen Ordner.
+Ein gewöhnlicher HTTP(S)-Webseiten-Tab muss nach der Installation neu geladen
+werden, damit der Kontextmenü-Listener verfügbar ist.
+
+Der Backend-Befehl `python manage.py provision_browser_timer_oauth --check`
+prüft beide festen Browserclients. `--browser edge` begrenzt die Auswahl.
+Der Timer muss aktiviert sein und `timer:self` in den OAuth-Scopes enthalten;
+das ursprüngliche Backend-Timer-Feature und der Angular-Consent sind Voraussetzung.
+
+```bash
+# Echter Edge, eigener X11-Display (z. B. Xvfb), disposable Browserprofil:
+# FIN3000_QA_PASSWORD aus dem bestehenden Seedvertrag setzen.
+QA_SLUG=edge-timetracker FIN3000_QA_DISPLAY=:93 npm run smoke:edge -- --json
+QA_SLUG=edge-timetracker FIN3000_QA_DISPLAY=:93 npm run smoke:edge -- --fault response-loss --json
+
+# Reproduzierbare Pakete für lokale entpackte Installation:
+npm run build:edge
+npm run repro:edge
+```
+
+Native Linux-QA benötigt `xdotool`. `FIN3000_EDGE` und `FIN3000_XDOTOOL` können
+Binaries auswählen. Der Runner benutzt die installierte Edge-Version, das echte
+Kontextmenü und Toolbar-Popup sowie einen eigenen, anschließend entfernten Profilordner.
+Der Antwortverlust-Test verwendet denselben lokalen Fehler-Proxy wie Firefox und
+prüft nach echtem Worker-Neustart einen Serverbeleg ohne doppelte Startbuchung.
+Er verwendet weder ein persönliches Profil noch den normalen Dev-Stack.
+Die öffentliche Manifest-Key-Datei bindet QA und Produktion an getrennte IDs.
+Der Produktionsbuild ist ein **Paket zur entpackten Installation**, kein Store-Release.
+Vor Edge-Add-ons-Veröffentlichung muss die tatsächliche Store-ID mit dem
+OAuth-Client/Redirect abgestimmt werden; ein Upload ist nicht Teil dieses Builds.
+
 ## Paketinstallation und Neustart
 
 Das erzeugte XPI ist **unsigniert**. Normales Firefox akzeptiert es dauerhaft
@@ -130,7 +177,8 @@ installiertes Chromium-Binary wählen. CI stellt Chromium bereit.
 Argumente/Konfiguration, 3 fehlende Voraussetzung, 4 fehlgeschlagene Prüfung.
 Build und Inspector prüfen feste Identitäten, Berechtigungen, Dateiliste
 und alle 26 Sprachkataloge. Repro baut zweimal und vergleicht XPI-SHA256.
-Artefakte liegen unter `dist/timer-extension/<qa|production>/`; native
+Firefox-Artefakte liegen unter `dist/timer-extension/<qa|production>/`,
+Edge unter `dist/timer-extension/edge/<qa|production>/`; native
 Screenshots unter `qa/native/`. Ein erneuter Build ersetzt dieses Verzeichnis.
 
 ## Verbindungs- und Datenschutzvertrag
@@ -145,10 +193,15 @@ Loopback-Host, während sämtliche API-Aufrufe den konfigurierten Port behalten.
 Siehe [Mozilla Match Patterns](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
 Nur der Hintergrundprozess speichert Tokens und angenommene Aktionen in
-IndexedDB. Popup-Nachrichten enthalten keine Tokens. Keine pauschalen
-Webseitenrechte, keine persistenten Content-Scripts, kein privater Modus.
-Rechtsklick nutzt `activeTab` im konkreten Frame und liest nur sichtbaren
-Elementtext, höchstens 500 Unicode-Codepoints. HTML, URL und Formularwerte
+IndexedDB. Popup-Nachrichten enthalten keine Tokens. Privater Modus ist gesperrt.
+Firefox nutzt `activeTab` im konkreten Frame ohne dauerhaftes Content-Script.
+Edge lädt einen isolierten Listener auf HTTP(S)-Webseiten in deren jeweiligen
+Frames. Dieser hält maximal zwei Minuten eine Knotenreferenz und liest erst
+nach der expliziten Fin3000-Menüaktion sichtbaren Elementtext, höchstens
+500 Unicode-Codepoints. Kein Auslesen auf Browser-/Store-Seiten; `about:blank`
+und `srcdoc`-Frames erfordern manuelle Eingabe. Die Referenz wird einmalig verbraucht,
+bei Navigation oder neuem Pointer-/Tastaturevent verworfen. Ein angemeldeter
+Startwunsch wird vor dem API-Abgleich maximal eine Minute dauerhaft gehalten. HTML, URL und Formularwerte
 werden nicht übertragen. Details: [PRIVACY.md](PRIVACY.md).
 
 Ungewisse Aktionen werden mit derselben ID über einen Serverbeleg abgeglichen.
@@ -158,7 +211,5 @@ Aktion. Offline-Zeiten werden nicht lokal gebucht. Disconnect stoppt keinen
 laufenden Server-Timer. Nach fehlgeschlagener Tokenrotation erneut verbinden.
 Ein unbekanntes Protokoll oder Speicherschema sperrt Aktionen sichtbar.
 
-Chrome/Edge benötigen einen eigenen Manifest-/Identity-Adapter und Store-QA;
-Safari zusätzlich die Apple-Verpackung. Diese Browser sind noch keine
-freigegebenen Targets. Der gemeinsame Timer-/OAuth-/Zustandskern bleibt
+Chrome und Safari bleiben Folgeziele. Safari benötigt zusätzlich die Apple-Verpackung. Der gemeinsame Timer-/OAuth-/Zustandskern bleibt
 unabhängig vom Angular-Bundle und wird dafür wiederverwendet.

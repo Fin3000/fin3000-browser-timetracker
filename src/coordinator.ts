@@ -117,7 +117,7 @@ export class TimerCoordinator {
       principal: s.principal,
       snapshot: s.snapshot,
       syncedAt: s.syncedAt,
-      busy: s.command?.action || null,
+      busy: s.command?.action || (s.pendingCapture?.start ? 'start' : null),
       stopQueued: !!s.stopIntent,
       draft: s.draft && s.draft.expiresAt > Date.now() ? s.draft : null,
       recovery: s.recovery && s.recovery.expiresAt > Date.now() ? s.recovery : null,
@@ -286,30 +286,44 @@ export class TimerCoordinator {
     });
   }
   async capture(text: string | null): Promise<void> {
+    if (!text) { await this.notice('manualCapture'); return; }
+    cleanFields({ description: text });
+    await this.edit(() => {
+      const s = this.state;
+      if (s.command || s.pendingCapture?.start) throw new Error('busy');
+      const connected = !!s.auth && !!s.principal && !s.connectionAttempt;
+      s.pendingCapture = {
+        text, expiresAt: Date.now() + (connected ? 60_000 : 600_000), attemptId: '',
+        ...(connected ? { start: { subject: s.principal!.subject,
+          timerId: s.snapshot?.timer?.id || null,
+          version: s.snapshot?.timer?.version || null } } : {}),
+      };
+      s.notice = connected ? 'checking' : 'connectForCapture';
+    });
+    await this.resumeCapture();
+  }
+  private async resumeCapture(): Promise<void> {
     await this.ready;
-    if (!text) {
-      await this.notice('manualCapture');
-      return;
-    }
-    if (!this.state.auth) {
-      await this.edit(() => {
-        this.state.pendingCapture = { text, expiresAt: Date.now() + 600_000, attemptId: '' };
-        this.state.notice = 'connectForCapture';
-      });
-      return;
-    }
+    if (!this.state.pendingCapture?.start || !this.state.auth) return;
     await this.sync(true);
-    const view = await this.view();
-    if (view.stale || !view.principal?.capabilities.start) {
-      await this.notice(view.stale ? 'offline' : 'permissionDenied');
-      return;
-    }
-    await this.accept(
-      'start',
-      { description: text },
-      view.snapshot?.timer?.id || null,
-      view.snapshot?.timer?.version || null,
-    );
+    await this.edit(() => {
+      const s = this.state;
+      this.expireDrafts();
+      const capture = s.pendingCapture;
+      if (!capture?.start || !s.auth || !s.principal || !s.snapshot || s.command) return;
+      if (s.failures || s.retryAt > Date.now() || !s.syncedAt || Date.now() - s.syncedAt > STALE) return;
+      s.pendingCapture = null;
+      if (capture.start.subject !== s.principal.subject ||
+          capture.start.timerId !== (s.snapshot.timer?.id || null) ||
+          capture.start.version !== (s.snapshot.timer?.version || null)) {
+        s.notice = 'conflict'; return;
+      }
+      if (!s.principal.capabilities.start) { s.notice = 'permissionDenied'; return; }
+      // Consume the intent and persist the immutable command in one transaction.
+      s.command = this.makeCommand('start', { description: capture.text });
+      s.notice = 'checking';
+    });
+    void this.drain();
   }
   private makeCommand(
     action: Action,
@@ -342,6 +356,7 @@ export class TimerCoordinator {
     await this.edit(() => {
       const s = this.state;
       if (!s.auth || !s.principal || !s.snapshot) throw new Error('connectAgain');
+      if (s.pendingCapture?.start) throw new Error('busy');
       if (!s.principal.capabilities[action]) throw new Error('permissionDenied');
       if (
         s.snapshot.timer?.id !== (timerId || undefined) ||
@@ -500,6 +515,7 @@ export class TimerCoordinator {
   async tick(): Promise<void> {
     // Retention also advances while disconnected or offline.
     await this.edit(() => this.expireDrafts());
+    await this.resumeCapture();
     await this.drain();
     await this.sync();
   }

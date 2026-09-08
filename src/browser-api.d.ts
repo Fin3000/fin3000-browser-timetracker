@@ -1,4 +1,4 @@
-/** The small Firefox WebExtension surface used by this target. */
+/** The browser WebExtension surface used by Firefox and Edge 152+. */
 interface TimerMessageSender {
   id?: string;
   url?: string;
@@ -8,10 +8,13 @@ interface TimerClickInfo {
   menuItemId: string | number;
   targetElementId?: number;
   frameId?: number;
+  pageUrl?: string;
+  frameUrl?: string;
 }
 interface TimerTab {
   id?: number;
   incognito?: boolean;
+  url?: string;
 }
 declare const browser: {
   runtime: {
@@ -34,6 +37,11 @@ declare const browser: {
     create(options: { id: string; title: string; contexts: string[] }): string | number;
     removeAll(): Promise<void>;
     getTargetElement(id: number): Element | null;
+    onClicked: { addListener(fn: (info: TimerClickInfo, tab?: TimerTab) => void): void };
+  };
+  contextMenus?: {
+    create(options: { id: string; title: string; contexts: string[] }): string | number;
+    removeAll(): Promise<void>;
     onClicked: { addListener(fn: (info: TimerClickInfo, tab?: TimerTab) => void): void };
   };
   scripting: {
@@ -67,5 +75,8 @@ declare const browser: {
       options: { type: 'basic'; iconUrl: string; title: string; message: string },
     ): Promise<string>;
   };
-  tabs: { create(options: { url: string }): Promise<TimerTab> };
+  tabs: {
+    create(options: { url: string }): Promise<TimerTab>;
+    sendMessage(tabId: number, message: unknown, options: { frameId: number }): Promise<unknown>;
+  };
 };

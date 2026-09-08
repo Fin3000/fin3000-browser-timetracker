@@ -28,9 +28,14 @@
     "timer-extension:build:production": "node scripts/build-timer-extension.mjs --profile production",
     "timer-extension:inspect": "node scripts/inspect-timer-extension.mjs",
     "timer-extension:repro:qa": "node scripts/timer-extension-repro.mjs --profile qa",
-    "timer-extension:smoke:firefox": "node scripts/timer-extension-firefox-smoke.mjs"
+    "timer-extension:smoke:firefox": "node scripts/timer-extension-firefox-smoke.mjs",
+    "build:edge": "node scripts/build-timer-extension.mjs --browser edge --profile production",
+    "build:edge:qa": "node scripts/build-timer-extension.mjs --browser edge --profile qa",
+    "smoke:edge": "node scripts/timer-extension-edge-smoke.mjs",
+    "repro:edge": "node scripts/timer-extension-repro.mjs --browser edge --profile production"
   },
   "devDependencies": {
+    "esbuild": "0.25.12",
     "playwright": "1.60.0",
     "typescript": "6.0.3"
   }

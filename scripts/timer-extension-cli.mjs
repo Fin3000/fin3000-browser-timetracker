@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -11,30 +12,32 @@ export const timerRoot = repoRoot;
 export function timerError(code, cause, exitCode = 2) {
   return new ProductCliError(
     code,
-    'Firefox-Zeiterfassung: Prüfung fehlgeschlagen.',
+    'Browser-Zeiterfassung: Prüfung fehlgeschlagen.',
     cause,
     'npm run timer-extension:doctor -- --help',
     exitCode,
   );
 }
 export function parseArgs(args, extra = []) {
-  const options = { profile: 'qa', json: false, help: false };
+  const options = { profile: 'qa', browser: 'firefox', json: false, help: false };
   for (let i = 0; i < args.length; i++) {
     const key = args[i];
     if (key === '--json' || key === '--help') options[key.slice(2)] = true;
-    else if (['--profile', ...extra].includes(key) && args[i + 1] && !args[i + 1].startsWith('--'))
+    else if (['--profile', '--browser', ...extra].includes(key) && args[i + 1] && !args[i + 1].startsWith('--'))
       options[key.slice(2)] = args[++i];
     else throw timerError('ARGUMENT_INVALID', `Unbekanntes oder unvollständiges Argument: ${key}`);
   }
   if (!['qa', 'production'].includes(options.profile))
     throw timerError('PROFILE_INVALID', 'Profil muss qa oder production sein.');
+  if (!['firefox', 'edge'].includes(options.browser))
+    throw timerError('BROWSER_INVALID', 'Browser muss firefox oder edge sein.');
   return options;
 }
-export async function loadTimerProfile(name) {
+export async function loadTimerProfile(name, browser = 'firefox') {
   if (!['qa', 'production'].includes(name))
     throw timerError('PROFILE_INVALID', 'Profil muss qa oder production sein.');
   const profile = JSON.parse(
-    await readFile(path.join(timerRoot, 'config', name + '.json'), 'utf8'),
+    await readFile(path.join(timerRoot, 'config', (browser === 'edge' ? 'edge-' : '') + name + '.json'), 'utf8'),
   );
   const keys = [
     '$schema',
@@ -67,14 +70,17 @@ export async function loadTimerProfile(name) {
     profile.frontendOrigin = process.env.FIN3000_TIMER_FRONTEND_ORIGIN || profile.frontendOrigin;
   }
   const prod = name === 'production';
+  if (!['firefox', 'edge'].includes(browser)) throw timerError('BROWSER_INVALID', 'Browser muss firefox oder edge sein.');
+  const edge = browser === 'edge';
+  const identity = edge ? await edgeIdentity(name) : null;
   if (
     profile.profileVersion !== 1 ||
     profile.protocolVersion !== 1 ||
     !/^\d+\.\d+\.\d+$/.test(profile.extensionVersion) ||
-    profile.extensionId !== (prod ? 'timetracker@fin3000.com' : 'timetracker-qa@fin3000.com') ||
-    profile.oauthClientId !== (prod ? 'fin3000-firefox-timer' : 'fin3000-firefox-timer-qa') ||
+    profile.extensionId !== (edge ? identity.extensionId : (prod ? 'timetracker@fin3000.com' : 'timetracker-qa@fin3000.com')) ||
+    profile.oauthClientId !== (edge ? 'fin3000-edge-timer' : 'fin3000-firefox-timer') + (prod ? '' : '-qa') ||
     profile.redirectUri !==
-      `https://${prod ? 'a086c2adfc379a0f654784b1eb316305e2a29c10' : '2ace9a4a44792c4b2d137142c71c42591e8365fd'}.extensions.allizom.org/`
+      (edge ? `https://${identity.extensionId}.chromiumapp.org/` : `https://${prod ? 'a086c2adfc379a0f654784b1eb316305e2a29c10' : '2ace9a4a44792c4b2d137142c71c42591e8365fd'}.extensions.allizom.org/`)
   )
     throw timerError('PROFILE_INVALID', 'Feste Profilidentität wurde verändert.');
   for (const origin of [profile.apiOrigin, profile.frontendOrigin]) {
@@ -178,4 +184,18 @@ if (isMain(import.meta.url)) {
       };
     throw timerError('ARGUMENT_INVALID', 'Befehl muss typecheck oder test sein.');
   }, 'timer-extension-cli.mjs <typecheck|test> [--json] [--help]');
+}
+
+export async function edgeIdentity(profile) {
+  const identities = JSON.parse(await readFile(path.join(timerRoot, 'config/edge-keys.json'), 'utf8'));
+  const identity = identities[profile];
+  const expected = profile === 'production' ? 'mefjglidfjkjajheckkgnlhleldpddmo' : 'dmajiladcmjicohaacjjiklgjcaihlbk';
+  const derived = createHash('sha256').update(Buffer.from(identity.key, 'base64')).digest('hex')
+    .slice(0, 32).replace(/[0-9a-f]/g, (x) => String.fromCharCode(97 + parseInt(x, 16)));
+  if (identity.extensionId !== expected || derived !== expected)
+    throw timerError('PROFILE_INVALID', 'Edge-Schlüssel und feste Extension-ID passen nicht zusammen.');
+  return identity;
+}
+export function artifactDirectory(profile, browser = 'firefox') {
+  return path.join(repoRoot, 'dist/timer-extension', ...(browser === 'edge' ? ['edge'] : []), profile);
 }

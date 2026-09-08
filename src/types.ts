@@ -95,6 +95,7 @@ export interface Auth {
   refreshing: boolean;
 }
 export interface PendingCapture {
+  start?: { subject: string; timerId: string | null; version: string | null };
   text: string;
   attemptId: string;
   expiresAt: number;
