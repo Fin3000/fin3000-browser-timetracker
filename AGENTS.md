@@ -6,7 +6,7 @@ working inside that workspace. The approved plan is
 
 - Work in a `feature/*` Git worktree; main is MR-only.
 - Before edits run the workspace `scripts/changed-files.sh` for all intended
-  paths in one invocation. Repository name: `tools/firefox-timetracker`.
+  paths in one invocation. Repository name: `tools/browser-timetracker`.
 - Build and test with this repository's own `npm ci`, `npm run typecheck`,
   `npm test`, `npm run build`, `npm run repro` and `git diff --check`.
 - Keep dependencies, fonts, icons and build helpers inside this repository.

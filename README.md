@@ -9,12 +9,12 @@ ungespeicherte Änderungen bleiben als gekennzeichneter Entwurf erhalten.
 
 ## Repository und Build
 
-GitLab: [ideal3000-library/fin3000-firefox-timetracker](https://gitlab.com/ideal3000-library/fin3000-firefox-timetracker).
-Lokaler Workspace-Pfad: `fin3000/tools/firefox-timetracker`.
+GitLab: [ideal3000-library/fin3000-browser-timetracker](https://gitlab.com/ideal3000-library/fin3000-browser-timetracker).
+Lokaler Workspace-Pfad: `fin3000/tools/browser-timetracker`.
 
 ```bash
-git clone git@gitlab.com:ideal3000-library/fin3000-firefox-timetracker.git
-cd fin3000-firefox-timetracker
+git clone git@gitlab.com:ideal3000-library/fin3000-browser-timetracker.git
+cd fin3000-browser-timetracker
 npm ci
 npm run typecheck
 npm test

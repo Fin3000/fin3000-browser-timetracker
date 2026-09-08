@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Rename the repository to fin3000-browser-timetracker and the npm package to @fin3000/browser-timetracker to reflect the shared browser extension.
+
 ### Added
 
 - Microsoft Edge 152+ support with native context-menu capture and toolbar timer, shared searchable pickers, exact browser-bound OAuth clients, separate reproducible ZIP packages and native Edge QA.
