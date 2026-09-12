@@ -28,6 +28,9 @@ Für die DOM-Tests einmal `npx playwright install chromium` ausführen oder
 Paketbuild benötigt. Build und Tests benötigen keinen Angular-Checkout.
 API und OAuth-Consent bleiben in `fin3000-backend` bzw. `fin3000-frontend`;
 der vollständige Verbindungstest benötigt deren isolierten QA-Stack.
+Diese beiden Repositories sowie die genannten Workspace-, Seed- und Release-
+Werkzeuge sind privat und nicht Teil dieser Veröffentlichung. Die lokale
+Build-/Testanleitung oben funktioniert ohne diese privaten Repositories.
 
 Die Auslagerung übernimmt den Extensionstand aus `fin3000-frontend` Commit
 `f64f9a14` einschließlich der korrigierten Suchfelder. Die Version `0.19.0`

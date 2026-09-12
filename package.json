@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/ideal3000-library/fin3000-browser-timetracker.git"
+    "url": "git+https://github.com/Fin3000/fin3000-browser-timetracker.git"
   },
   "scripts": {
     "build": "node scripts/build-timer-extension.mjs --profile production",
