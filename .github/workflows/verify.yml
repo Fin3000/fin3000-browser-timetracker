@@ -1,0 +1,26 @@
+name: Verify extensions
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22.22.3
+          cache: npm
+      - run: npm ci
+      - run: sudo apt-get update && sudo apt-get install -y zip
+      - run: npx playwright install --with-deps chromium
+      - run: npm run typecheck
+      - run: npm test
+        env:
+          QA_SLUG: timer-ci
+      - run: npm run repro
+      - run: npm run repro:edge

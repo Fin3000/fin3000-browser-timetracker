@@ -1,5 +1,7 @@
 # Fin3000 Browser-Zeiterfassung
 
+Open Source unter [Apache-2.0](LICENSE); Drittanbieterhinweise siehe [NOTICE](NOTICE).
+
 Firefox ab 140 und Microsoft Edge ab 152: Element per Rechtsklick erfassen, eigene Zeit starten/stoppen,
 Beschreibung, Projekt und Abrechenbarkeit im Toolbar-Popup bearbeiten.
 Kunden filtern die Projektauswahl; die Kundenzuordnung kommt vom Projekt.
@@ -9,11 +11,11 @@ ungespeicherte Änderungen bleiben als gekennzeichneter Entwurf erhalten.
 
 ## Repository und Build
 
-GitLab: [ideal3000-library/fin3000-browser-timetracker](https://gitlab.com/ideal3000-library/fin3000-browser-timetracker).
+Öffentlicher Quellcode: [Fin3000/fin3000-browser-timetracker](https://github.com/Fin3000/fin3000-browser-timetracker).
 Lokaler Workspace-Pfad: `fin3000/tools/browser-timetracker`.
 
 ```bash
-git clone git@gitlab.com:ideal3000-library/fin3000-browser-timetracker.git
+git clone https://github.com/Fin3000/fin3000-browser-timetracker.git
 cd fin3000-browser-timetracker
 npm ci
 npm run typecheck
@@ -39,6 +41,13 @@ Inter stammt aus [rsms/inter](https://github.com/rsms/inter) und wird unter der
 [Sil Open Font License](assets/Inter-OFL.txt) mitgeliefert.
 
 ## Isoliert ausprobieren
+
+Dieses Repository veröffentlicht den Quellcode für beide Browser. Die erzeugten
+Firefox-XPI-Dateien sind **unsigniert** und nur zum temporären Entwicklertest
+geeignet; Edge-ZIP-Dateien sind **entpackte Entwicklerpakete**, keine
+Store-Veröffentlichung. Für Login und Zeitbuchungen müssen die passenden
+Fin3000-API- und Consent-Versionen bereitstehen. Ein erfolgreicher Paketbuild
+beweist keine Freischaltung des Produktivsystems.
 
 Node 22+, `npm ci`, `zip`, Firefox und geckodriver werden lokal benötigt.
 Der Runner installiert nichts in einem persönlichen Browserprofil.

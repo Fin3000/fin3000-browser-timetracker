@@ -4,6 +4,8 @@
 
 ### Changed
 
+- Publish the shared Firefox/Edge source under Apache-2.0 in the Fin3000 GitHub organization, with standalone verification and explicit unsigned/developer-package instructions; runtime behavior and browser identities remain unchanged.
+
 - Rename the repository to fin3000-browser-timetracker and the npm package to @fin3000/browser-timetracker to reflect the shared browser extension.
 
 ### Added
