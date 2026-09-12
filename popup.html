@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fin3000</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script type="module" src="src/popup.js"></script>
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="brand">
+        <img src="icon.png" alt="" width="24" height="24" /><strong>Fin3000</strong
+        ><span data-i18n="timeTracking"></span
+        ><button id="open-app" class="icon-button" data-i18n-title="openApp" aria-label="Fin3000">
+          ↗
+        </button>
+      </div>
+      <div class="timer-row">
+        <div class="timer-summary">
+          <span id="timer-status" class="eyebrow" data-i18n="idle"></span
+          ><output id="elapsed" aria-live="off">00:00:00</output
+          ><bdi id="saved-title" class="saved-title"></bdi>
+        </div>
+        <button id="stop" class="stop" hidden data-i18n="stop"></button>
+      </div>
+    </header>
+    <main>
+      <p id="notice" role="status" aria-live="polite" hidden></p>
+      <section id="connection">
+        <h1 data-i18n="connectTitle"></h1>
+        <p data-i18n="connectBody"></p>
+        <button id="connect" class="primary" data-i18n="connect"></button>
+      </section>
+      <section id="editor" hidden>
+        <div class="identity"><bdi id="account"></bdi><bdi id="member"></bdi></div>
+        <form id="timer-form">
+          <label for="description" data-i18n="description"></label>
+          <textarea
+            id="description"
+            rows="2"
+            maxlength="1000"
+            data-i18n-placeholder="descriptionPlaceholder"
+          ></textarea>
+          <div id="length" class="counter" aria-live="off">0 / 500</div>
+          <div class="picker-row" id="client-picker">
+            <label for="client" data-i18n="client"></label>
+            <div class="picker-control">
+              <input
+                id="client"
+                type="text"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-controls="client-options"
+                autocomplete="off"
+                maxlength="200"
+                data-i18n-placeholder="allClients"
+              />
+              <span class="picker-chevron" aria-hidden="true">⌄</span>
+              <button
+                id="client-clear"
+                type="button"
+                class="picker-clear"
+                hidden
+                data-i18n-title="clearSelection"
+              >
+                ×
+              </button>
+            </div>
+            <div id="client-panel" class="picker-panel" popover="manual">
+              <div id="client-options" role="listbox" data-i18n-label="client"></div>
+              <p id="client-status" class="picker-status" role="status" hidden></p>
+              <button
+                type="button"
+                id="more-clients"
+                class="text-button picker-more"
+                hidden
+                data-i18n="more"
+              ></button>
+            </div>
+          </div>
+          <div class="picker-row" id="project-picker">
+            <label for="project" data-i18n="project"></label>
+            <div class="picker-control">
+              <input
+                id="project"
+                type="text"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-controls="project-options"
+                autocomplete="off"
+                maxlength="200"
+                data-i18n-placeholder="noProject"
+              />
+              <span class="picker-chevron" aria-hidden="true">⌄</span>
+              <button
+                id="project-clear"
+                type="button"
+                class="picker-clear"
+                hidden
+                data-i18n-title="clearSelection"
+              >
+                ×
+              </button>
+            </div>
+            <div id="project-panel" class="picker-panel" popover="manual">
+              <div id="project-options" role="listbox" data-i18n-label="project"></div>
+              <p id="project-status" class="picker-status" role="status" hidden></p>
+              <button
+                type="button"
+                id="more-projects"
+                class="text-button picker-more"
+                hidden
+                data-i18n="more"
+              ></button>
+            </div>
+          </div>
+          <p id="picker-error" class="field-note" role="status" hidden></p>
+          <p id="task" class="field-note" hidden></p>
+          <label class="checkbox"
+            ><input id="billable" type="checkbox" /><span data-i18n="billable"></span
+          ></label>
+        </form>
+        <p id="dirty-note" class="field-note" hidden data-i18n="dirtyStop"></p>
+        <section id="recovery" class="recovery" hidden>
+          <strong data-i18n="recoveryTitle"></strong>
+          <p id="recovery-text"></p>
+          <button id="drop-recovery" class="text-button" data-i18n="dropDraft"></button>
+        </section>
+        <details id="discard-panel" hidden>
+          <summary data-i18n="discard"></summary>
+          <p data-i18n="discardConfirm"></p>
+          <button id="discard" class="danger-outline" data-i18n="discard"></button>
+        </details>
+      </section>
+    </main>
+    <footer>
+      <div id="editor-actions" hidden>
+        <button
+          id="save"
+          type="submit"
+          form="timer-form"
+          class="primary"
+          data-i18n="start"
+        ></button>
+      </div>
+      <div class="footer-links">
+        <button id="refresh" class="text-button" data-i18n="refresh"></button
+        ><span id="sync-status"></span
+        ><button id="disconnect" class="text-button" hidden data-i18n="disconnect"></button>
+      </div>
+    </footer>
+  </body>
+</html>

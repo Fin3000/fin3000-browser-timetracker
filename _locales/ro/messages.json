@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Conectează pontajul"
+  },
+  "connectBody": {
+    "message": "Pornește și oprește timpul în browser și atribuie-l clienților și proiectelor."
+  },
+  "verifiedNotice": {
+    "message": "Extensia oficială Fin3000 trimite textul elementului ales ca descriere. Citește doar cronometrul tău și clienții și proiectele permise."
+  },
+  "scope": {
+    "message": "Citirea, pornirea, editarea, oprirea și abandonarea propriului timp"
+  },
+  "permissionDenied": {
+    "message": "Nu ai permisiunea necesară pentru pontaj."
+  },
+  "running": {
+    "message": "Cronometrul rulează"
+  },
+  "idle": {
+    "message": "Niciun cronometru nu rulează"
+  },
+  "manualCapture": {
+    "message": "Acest element nu poate fi preluat. Introdu descrierea manual."
+  },
+  "dirtyStop": {
+    "message": "Oprirea înregistrează valorile salvate. Modificările nesalvate rămân ca schiță."
+  },
+  "taskCleared": {
+    "message": "Schimbarea proiectului elimină sarcina anterioară."
+  },
+  "recoveryTitle": {
+    "message": "Schiță nesalvată"
+  },
+  "discardConfirm": {
+    "message": "Abandonezi acest cronometru? Nu va fi creată nicio înregistrare de timp."
+  },
+  "confirmed": {
+    "message": "Acțiunea cronometrului a fost confirmată."
+  },
+  "conflict": {
+    "message": "Cronometrul s-a schimbat. Actualizează și verifică starea curentă."
+  },
+  "expiredAction": {
+    "message": "Acțiunea a expirat. Verifică cronometrul înainte de o nouă acțiune."
+  },
+  "longTimer": {
+    "message": "Au fost înregistrate peste 24 de ore. Verifică înregistrarea în Fin3000."
+  },
+  "updateRequired": {
+    "message": "Actualizează extensia înainte de a continua."
+  },
+  "storageError": {
+    "message": "Stocarea locală nu este disponibilă. Redeschide extensia."
+  },
+  "rateLimited": {
+    "message": "Așteaptă și actualizează starea mai târziu."
+  },
+  "connectAgain": {
+    "message": "Reconectează extensia. Un cronometru activ continuă să ruleze."
+  },
+  "captureReady": {
+    "message": "Textul selectat este pregătit. Verifică persoana și pornește explicit."
+  },
+  "disconnected": {
+    "message": "Deconectat. Un cronometru activ continuă să ruleze."
+  },
+  "stale": {
+    "message": "Stare încă neconfirmată"
+  },
+  "synced": {
+    "message": "Actualizat"
+  },
+  "timeTracking": {
+    "message": "Pontaj"
+  },
+  "description": {
+    "message": "Descriere"
+  },
+  "descriptionPlaceholder": {
+    "message": "La ce lucrezi?"
+  },
+  "noProject": {
+    "message": "Fără proiect"
+  },
+  "untitled": {
+    "message": "Fără descriere"
+  },
+  "start": {
+    "message": "Pornește cronometrul"
+  },
+  "stop": {
+    "message": "Oprește cronometrul"
+  },
+  "save": {
+    "message": "Salvează"
+  },
+  "discard": {
+    "message": "Renunță la cronometru"
+  },
+  "client": {
+    "message": "Client · Filtru"
+  },
+  "project": {
+    "message": "Proiect"
+  },
+  "task": {
+    "message": "Sarcină"
+  },
+  "billable": {
+    "message": "Facturabil"
+  },
+  "searchClients": {
+    "message": "Caută client…"
+  },
+  "searchProjects": {
+    "message": "Caută..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Următoarea"
+  },
+  "refresh": {
+    "message": "Actualizează"
+  },
+  "dropDraft": {
+    "message": "Șterge"
+  },
+  "archived": {
+    "message": "Inactiv"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Conectare la Fin3000"
+  },
+  "disconnect": {
+    "message": "Deconectare"
+  },
+  "connecting": {
+    "message": "Se deschide conexiunea Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Conexiunea a fost anulată."
+  },
+  "checking": {
+    "message": "Primirea este verificată. Nu trimiteți din nou."
+  },
+  "busy": {
+    "message": "Așteptați …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Pornește și oprește timpul în browser și atribuie-l clienților și proiectelor."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Pornește cronometrul"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Acces refuzat"
+  },
+  "configuration": {
+    "message": "Actualizează extensia înainte de a continua."
+  },
+  "serverError": {
+    "message": "A apărut o eroare neașteptată"
+  },
+  "invalidInput": {
+    "message": "Valoare invalidă"
+  },
+  "refreshFirst": {
+    "message": "Stare încă neconfirmată"
+  },
+  "connectForCapture": {
+    "message": "Conectează pontajul"
+  },
+  "stopQueued": {
+    "message": "Oprește cronometrul · Așteptați …"
+  },
+  "noResults": {
+    "message": "Niciun rezultat"
+  },
+  "loading": {
+    "message": "Se încarcă..."
+  },
+  "clearSelection": {
+    "message": "Anulează selecția"
+  }
+}

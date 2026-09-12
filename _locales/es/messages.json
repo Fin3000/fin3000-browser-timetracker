@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Conectar el registro de tiempo"
+  },
+  "connectBody": {
+    "message": "Inicia y detén tu tiempo en el navegador y asígnalo a clientes y proyectos."
+  },
+  "verifiedNotice": {
+    "message": "La extensión oficial de Fin3000 envía como descripción el texto del elemento seleccionado. Solo lee tu temporizador y los clientes y proyectos permitidos."
+  },
+  "scope": {
+    "message": "Leer, iniciar, editar, detener y descartar tu propio tiempo"
+  },
+  "permissionDenied": {
+    "message": "No tienes el permiso necesario para registrar tiempo."
+  },
+  "running": {
+    "message": "Temporizador en marcha"
+  },
+  "idle": {
+    "message": "Ningún temporizador en marcha"
+  },
+  "manualCapture": {
+    "message": "No se puede capturar este elemento. Escribe la descripción manualmente."
+  },
+  "dirtyStop": {
+    "message": "Detener registra los valores guardados. Los cambios sin guardar quedan como borrador."
+  },
+  "taskCleared": {
+    "message": "Cambiar de proyecto elimina la tarea anterior."
+  },
+  "recoveryTitle": {
+    "message": "Borrador sin guardar"
+  },
+  "discardConfirm": {
+    "message": "¿Descartar este temporizador? No se creará ningún registro de tiempo."
+  },
+  "confirmed": {
+    "message": "Acción del temporizador confirmada."
+  },
+  "conflict": {
+    "message": "El temporizador ha cambiado. Actualiza y comprueba su estado actual."
+  },
+  "expiredAction": {
+    "message": "La acción ha caducado. Comprueba el temporizador antes de iniciar otra acción."
+  },
+  "longTimer": {
+    "message": "Se han registrado más de 24 horas. Revisa el registro en Fin3000."
+  },
+  "updateRequired": {
+    "message": "Actualiza la extensión antes de continuar."
+  },
+  "storageError": {
+    "message": "El almacenamiento local no está disponible. Vuelve a abrir la extensión."
+  },
+  "rateLimited": {
+    "message": "Espera y actualiza el estado más tarde."
+  },
+  "connectAgain": {
+    "message": "Vuelve a conectar la extensión. Un temporizador activo seguirá funcionando."
+  },
+  "captureReady": {
+    "message": "El texto seleccionado está listo. Comprueba la persona e inicia expresamente."
+  },
+  "disconnected": {
+    "message": "Desconectado. Un temporizador activo seguirá funcionando."
+  },
+  "stale": {
+    "message": "Estado aún sin confirmar"
+  },
+  "synced": {
+    "message": "Actualizado"
+  },
+  "timeTracking": {
+    "message": "Registro de jornada"
+  },
+  "description": {
+    "message": "Descripción"
+  },
+  "descriptionPlaceholder": {
+    "message": "¿En qué estás trabajando?"
+  },
+  "noProject": {
+    "message": "Sin proyecto"
+  },
+  "untitled": {
+    "message": "Sin descripción"
+  },
+  "start": {
+    "message": "Iniciar temporizador"
+  },
+  "stop": {
+    "message": "Detener temporizador"
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "discard": {
+    "message": "Descartar temporizador"
+  },
+  "client": {
+    "message": "Cliente · Filtro"
+  },
+  "project": {
+    "message": "Proyecto"
+  },
+  "task": {
+    "message": "Tarea"
+  },
+  "billable": {
+    "message": "Facturable"
+  },
+  "searchClients": {
+    "message": "Buscar cliente…"
+  },
+  "searchProjects": {
+    "message": "Buscar..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Siguiente"
+  },
+  "refresh": {
+    "message": "Actualizar"
+  },
+  "dropDraft": {
+    "message": "Eliminar"
+  },
+  "archived": {
+    "message": "Inactivo"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Conectar con Fin3000"
+  },
+  "disconnect": {
+    "message": "Desconectar"
+  },
+  "connecting": {
+    "message": "Abriendo la conexión con Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Se canceló la conexión."
+  },
+  "checking": {
+    "message": "Se está comprobando la recepción. No lo envíes de nuevo."
+  },
+  "busy": {
+    "message": "Espera un momento …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Inicia y detén tu tiempo en el navegador y asígnalo a clientes y proyectos."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Iniciar temporizador"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Acceso denegado"
+  },
+  "configuration": {
+    "message": "Actualiza la extensión antes de continuar."
+  },
+  "serverError": {
+    "message": "Se ha producido un error inesperado"
+  },
+  "invalidInput": {
+    "message": "Valor no válido"
+  },
+  "refreshFirst": {
+    "message": "Estado aún sin confirmar"
+  },
+  "connectForCapture": {
+    "message": "Conectar el registro de tiempo"
+  },
+  "stopQueued": {
+    "message": "Detener temporizador · Espera un momento …"
+  },
+  "noResults": {
+    "message": "No hay resultados"
+  },
+  "loading": {
+    "message": "Cargando..."
+  },
+  "clearSelection": {
+    "message": "Anular selección"
+  }
+}

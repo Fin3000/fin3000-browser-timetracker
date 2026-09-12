@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "profile",
+    "profileVersion",
+    "protocolVersion",
+    "extensionId",
+    "oauthClientId",
+    "redirectUri",
+    "apiOrigin",
+    "frontendOrigin"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "./schema.json"
+    },
+    "profile": {
+      "enum": [
+        "qa",
+        "production"
+      ]
+    },
+    "profileVersion": {
+      "const": 1
+    },
+    "protocolVersion": {
+      "const": 1
+    },
+    "extensionId": {
+      "enum": [
+        "timetracker@fin3000.com",
+        "timetracker-qa@fin3000.com",
+        "dmajiladcmjicohaacjjiklgjcaihlbk",
+        "mefjglidfjkjajheckkgnlhleldpddmo"
+      ]
+    },
+    "oauthClientId": {
+      "enum": [
+        "fin3000-firefox-timer",
+        "fin3000-firefox-timer-qa",
+        "fin3000-edge-timer",
+        "fin3000-edge-timer-qa"
+      ]
+    },
+    "redirectUri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "apiOrigin": {
+      "type": "string",
+      "format": "uri"
+    },
+    "frontendOrigin": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

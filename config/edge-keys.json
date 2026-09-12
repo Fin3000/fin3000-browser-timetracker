@@ -1,0 +1,10 @@
+{
+  "qa": {
+    "extensionId": "dmajiladcmjicohaacjjiklgjcaihlbk",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnwmr6D7ofJvjSXct1DFEGZi9pRKTMiYtlbvchV0SQKuJ2v2duxnzmLHylFO0dDtwrijeRo6jzOGf4qKv6Y3uMfITNrz65wMplnIb7GmremX8Yg/ciETmnGdg1dMQbinlknGXlDIfmxLb0fv3KtFTsTisVQd35tijbo7j/UWCJjobMrM+LU1RRjUBMX8OPiEQnxL0CegotCc/jhWrSDFesXUdVhtKBc4uMUjJr43HHOdCFt//mwRRX2iil8DQdZKxjHqQOIwv8r+bE09iYDyeh9PLNfAtw1RmZnG58VVU+NT1bM9ozywGLBcdtIMQswnjyXOCCiSt6yp751mZ6/lHzQIDAQAB"
+  },
+  "production": {
+    "extensionId": "mefjglidfjkjajheckkgnlhleldpddmo",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvN1WN33CcL77s9MrKmMVES2mw6GF1HlLoMzDyiR09cwTPLGqLgpnsyNxAd7VsjY84jurYp5KmjUBCtVTpn5R1vCtF3JlQpB/jXZU27V271L1ZkhgKckw55EyKO0PLJnjRomu+pQtiufJ0sPnm/uf4ghEosj+neNYYKJ/W5ngc7fH3pQ4TvbAeGqAe774qhj5g9pWpmIxy1CfK+WTRztJXSw1iGiZODTQJesgRw2v+64aYlwpWesezikk2icMe5BRYxnPhS8ODsLHotm0gTB3qLUuaI4fTTLKBlC17A32MTX4NVnXtLBjFVJ9fw/f/7b5ufdyg+0Blxabhi0gB9rvcwIDAQAB"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Połącz rejestrowanie czasu"
+  },
+  "connectBody": {
+    "message": "Uruchamiaj i zatrzymuj czas w przeglądarce oraz przypisuj go do klientów i projektów."
+  },
+  "verifiedNotice": {
+    "message": "Oficjalne rozszerzenie Fin3000 wysyła tekst wybranego elementu jako opis. Odczytuje tylko Twój licznik oraz dozwolonych klientów i projekty."
+  },
+  "scope": {
+    "message": "Odczytywanie, uruchamianie, edycja, zatrzymywanie i odrzucanie własnego czasu"
+  },
+  "permissionDenied": {
+    "message": "Nie masz wymaganego uprawnienia do rejestrowania czasu."
+  },
+  "running": {
+    "message": "Licznik działa"
+  },
+  "idle": {
+    "message": "Żaden licznik nie działa"
+  },
+  "manualCapture": {
+    "message": "Nie można pobrać tego elementu. Wpisz opis ręcznie."
+  },
+  "dirtyStop": {
+    "message": "Zatrzymanie zapisuje wcześniej zachowane wartości. Niezapisane zmiany pozostają szkicem."
+  },
+  "taskCleared": {
+    "message": "Zmiana projektu usuwa poprzednie zadanie."
+  },
+  "recoveryTitle": {
+    "message": "Niezapisany szkic"
+  },
+  "discardConfirm": {
+    "message": "Odrzucić ten licznik? Wpis czasu nie zostanie utworzony."
+  },
+  "confirmed": {
+    "message": "Działanie licznika potwierdzone."
+  },
+  "conflict": {
+    "message": "Licznik został zmieniony. Odśwież i sprawdź aktualny stan."
+  },
+  "expiredAction": {
+    "message": "Działanie wygasło. Sprawdź licznik przed rozpoczęciem nowego działania."
+  },
+  "longTimer": {
+    "message": "Zarejestrowano ponad 24 godziny. Sprawdź wpis w Fin3000."
+  },
+  "updateRequired": {
+    "message": "Zaktualizuj rozszerzenie przed kontynuowaniem."
+  },
+  "storageError": {
+    "message": "Pamięć lokalna jest niedostępna. Otwórz rozszerzenie ponownie."
+  },
+  "rateLimited": {
+    "message": "Poczekaj i odśwież stan później."
+  },
+  "connectAgain": {
+    "message": "Połącz rozszerzenie ponownie. Aktywny licznik nadal działa."
+  },
+  "captureReady": {
+    "message": "Wybrany tekst jest gotowy. Sprawdź osobę i świadomie uruchom licznik."
+  },
+  "disconnected": {
+    "message": "Rozłączono. Aktywny licznik nadal działa."
+  },
+  "stale": {
+    "message": "Stan jeszcze niepotwierdzony"
+  },
+  "synced": {
+    "message": "Zaktualizowano"
+  },
+  "timeTracking": {
+    "message": "Ewidencja czasu pracy"
+  },
+  "description": {
+    "message": "Opis"
+  },
+  "descriptionPlaceholder": {
+    "message": "Nad czym pracujesz?"
+  },
+  "noProject": {
+    "message": "Bez projektu"
+  },
+  "untitled": {
+    "message": "Bez opisu"
+  },
+  "start": {
+    "message": "Uruchom stoper"
+  },
+  "stop": {
+    "message": "Zatrzymaj stoper"
+  },
+  "save": {
+    "message": "Zapisz"
+  },
+  "discard": {
+    "message": "Odrzuć stoper"
+  },
+  "client": {
+    "message": "Klient · Filtr"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Zadanie"
+  },
+  "billable": {
+    "message": "Rozliczalne"
+  },
+  "searchClients": {
+    "message": "Szukaj klienta…"
+  },
+  "searchProjects": {
+    "message": "Szukaj..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Następna"
+  },
+  "refresh": {
+    "message": "Odśwież"
+  },
+  "dropDraft": {
+    "message": "Usuń"
+  },
+  "archived": {
+    "message": "Nieaktywne"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Połącz z Fin3000"
+  },
+  "disconnect": {
+    "message": "Rozłącz"
+  },
+  "connecting": {
+    "message": "Otwieranie połączenia z Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Połączenie zostało anulowane."
+  },
+  "checking": {
+    "message": "Trwa sprawdzanie odbioru. Nie wysyłaj ponownie."
+  },
+  "busy": {
+    "message": "Proszę czekać …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Uruchamiaj i zatrzymuj czas w przeglądarce oraz przypisuj go do klientów i projektów."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Uruchom stoper"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Dostęp zabroniony"
+  },
+  "configuration": {
+    "message": "Zaktualizuj rozszerzenie przed kontynuowaniem."
+  },
+  "serverError": {
+    "message": "Wystąpił nieoczekiwany błąd"
+  },
+  "invalidInput": {
+    "message": "Nieprawidłowa wartość"
+  },
+  "refreshFirst": {
+    "message": "Stan jeszcze niepotwierdzony"
+  },
+  "connectForCapture": {
+    "message": "Połącz rejestrowanie czasu"
+  },
+  "stopQueued": {
+    "message": "Zatrzymaj stoper · Proszę czekać …"
+  },
+  "noResults": {
+    "message": "Brak wyników"
+  },
+  "loading": {
+    "message": "Wczytywanie..."
+  },
+  "clearSelection": {
+    "message": "Wyczyść wybór"
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fin3000 timer fixture</title>
+    <style>
+      body {
+        font: 18px system-ui;
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+      section {
+        padding: 24px;
+        border: 1px solid #ddd;
+        margin: 20px 0;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fin3000 · isolierte Timer-Testseite</h1>
+    <p>Rechtsklick auf einen der folgenden Texte. Alle Inhalte sind synthetisch.</p>
+    <section id="nested">
+      Ticket <strong>Überarbeitung 🧪</strong><span class="hidden">HIDDEN_SECRET</span
+      ><input value="FORM_SECRET" /><span contenteditable="true">EDITABLE_SECRET</span
+      ><span>prüfen</span>
+    </section>
+    <section id="selected">Anfang <span id="selection-part">Ausgewählter Text</span> Ende</section>
+    <section id="next">Nachbartext NEVER_CAPTURE_NEIGHBOR</section>
+    <section id="empty"><input type="password" value="PASSWORD_SECRET" /></section>
+    <section id="hostile">&lt;img src=x onerror=alert(1)&gt; Nur Text</section>
+    <section id="long"></section>
+    <section id="shadow"></section>
+    <iframe
+      title="Same-origin frame"
+      srcdoc="<p id='frame-target'>Text im eigenen Frame</p>"
+    ></iframe>
+    <script>
+      document.getElementById('long').textContent = '👩‍💻 Ä '.repeat(400);
+      const shadow = document.getElementById('shadow').attachShadow({ mode: 'open' });
+      shadow.innerHTML = '<span id="shadow-target">Offener Shadow-Text</span>';
+    </script>
+  </body>
+</html>

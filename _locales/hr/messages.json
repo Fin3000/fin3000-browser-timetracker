@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Poveži praćenje vremena"
+  },
+  "connectBody": {
+    "message": "Pokrenite i zaustavite vrijeme u pregledniku te ga dodijelite klijentima i projektima."
+  },
+  "verifiedNotice": {
+    "message": "Službeno proširenje Fin3000 šalje tekst odabranog elementa kao opis. Čita samo vaš mjerač vremena i dopuštene klijente i projekte."
+  },
+  "scope": {
+    "message": "Čitanje, pokretanje, uređivanje, zaustavljanje i odbacivanje vlastitog vremena"
+  },
+  "permissionDenied": {
+    "message": "Nemate potrebnu dozvolu za praćenje vremena."
+  },
+  "running": {
+    "message": "Mjerač vremena radi"
+  },
+  "idle": {
+    "message": "Nijedan mjerač vremena ne radi"
+  },
+  "manualCapture": {
+    "message": "Ovaj element nije moguće preuzeti. Unesite opis ručno."
+  },
+  "dirtyStop": {
+    "message": "Zaustavljanje bilježi spremljene vrijednosti. Nespremljene promjene ostaju kao nacrt."
+  },
+  "taskCleared": {
+    "message": "Promjena projekta uklanja prethodni zadatak."
+  },
+  "recoveryTitle": {
+    "message": "Nespremljeni nacrt"
+  },
+  "discardConfirm": {
+    "message": "Odbaciti ovaj mjerač vremena? Zapis vremena neće biti izrađen."
+  },
+  "confirmed": {
+    "message": "Radnja mjerača vremena potvrđena."
+  },
+  "conflict": {
+    "message": "Mjerač vremena se promijenio. Osvježite i provjerite trenutačno stanje."
+  },
+  "expiredAction": {
+    "message": "Radnja je istekla. Provjerite mjerač vremena prije nove radnje."
+  },
+  "longTimer": {
+    "message": "Zabilježeno je više od 24 sata. Provjerite zapis u Fin3000."
+  },
+  "updateRequired": {
+    "message": "Ažurirajte proširenje prije nastavka."
+  },
+  "storageError": {
+    "message": "Lokalna pohrana nije dostupna. Ponovno otvorite proširenje."
+  },
+  "rateLimited": {
+    "message": "Pričekajte i osvježite stanje kasnije."
+  },
+  "connectAgain": {
+    "message": "Ponovno povežite proširenje. Aktivni mjerač vremena nastavlja raditi."
+  },
+  "captureReady": {
+    "message": "Odabrani tekst je spreman. Provjerite osobu i svjesno pokrenite."
+  },
+  "disconnected": {
+    "message": "Veza je prekinuta. Aktivni mjerač vremena nastavlja raditi."
+  },
+  "stale": {
+    "message": "Stanje još nije potvrđeno"
+  },
+  "synced": {
+    "message": "Ažurirano"
+  },
+  "timeTracking": {
+    "message": "Evidencija radnog vremena"
+  },
+  "description": {
+    "message": "Opis"
+  },
+  "descriptionPlaceholder": {
+    "message": "Na čemu radiš?"
+  },
+  "noProject": {
+    "message": "Bez projekta"
+  },
+  "untitled": {
+    "message": "Bez opisa"
+  },
+  "start": {
+    "message": "Pokreni štopericu"
+  },
+  "stop": {
+    "message": "Zaustavi štopericu"
+  },
+  "save": {
+    "message": "Spremi"
+  },
+  "discard": {
+    "message": "Odbaci štopericu"
+  },
+  "client": {
+    "message": "Kupac · Filtar"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "task": {
+    "message": "Zadatak"
+  },
+  "billable": {
+    "message": "Naplativo"
+  },
+  "searchClients": {
+    "message": "Pretraži kupca…"
+  },
+  "searchProjects": {
+    "message": "Pretraži..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Sljedeća"
+  },
+  "refresh": {
+    "message": "Osvježi"
+  },
+  "dropDraft": {
+    "message": "Izbriši"
+  },
+  "archived": {
+    "message": "Neaktivno"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Poveži s Fin3000"
+  },
+  "disconnect": {
+    "message": "Prekini vezu"
+  },
+  "connecting": {
+    "message": "Otvara se veza s Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Povezivanje je otkazano."
+  },
+  "checking": {
+    "message": "Zaprimanje se provjerava. Nemojte ponovno slati."
+  },
+  "busy": {
+    "message": "Pričekajte …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Pokrenite i zaustavite vrijeme u pregledniku te ga dodijelite klijentima i projektima."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Pokreni štopericu"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Pristup odbijen"
+  },
+  "configuration": {
+    "message": "Ažurirajte proširenje prije nastavka."
+  },
+  "serverError": {
+    "message": "Došlo je do neočekivane pogreške"
+  },
+  "invalidInput": {
+    "message": "Nevaljana vrijednost"
+  },
+  "refreshFirst": {
+    "message": "Stanje još nije potvrđeno"
+  },
+  "connectForCapture": {
+    "message": "Poveži praćenje vremena"
+  },
+  "stopQueued": {
+    "message": "Zaustavi štopericu · Pričekajte …"
+  },
+  "noResults": {
+    "message": "Nema rezultata"
+  },
+  "loading": {
+    "message": "Učitavanje..."
+  },
+  "clearSelection": {
+    "message": "Poništi odabir"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Savienot laika uzskaiti"
+  },
+  "connectBody": {
+    "message": "Sāciet un apturiet laiku pārlūkā un piesaistiet to klientiem un projektiem."
+  },
+  "verifiedNotice": {
+    "message": "Oficiālais Fin3000 paplašinājums nosūta izvēlētā elementa tekstu kā aprakstu. Tas lasa tikai jūsu taimeri un atļautos klientus un projektus."
+  },
+  "scope": {
+    "message": "Sava laika lasīšana, sākšana, rediģēšana, apturēšana un atmešana"
+  },
+  "permissionDenied": {
+    "message": "Jums nav vajadzīgās laika uzskaites atļaujas."
+  },
+  "running": {
+    "message": "Taimeris darbojas"
+  },
+  "idle": {
+    "message": "Neviens taimeris nedarbojas"
+  },
+  "manualCapture": {
+    "message": "Šo elementu nevar iegūt. Ievadiet aprakstu manuāli."
+  },
+  "dirtyStop": {
+    "message": "Apturēšana reģistrē saglabātās vērtības. Nesaglabātās izmaiņas paliek kā melnraksts."
+  },
+  "taskCleared": {
+    "message": "Projekta maiņa noņem iepriekšējo uzdevumu."
+  },
+  "recoveryTitle": {
+    "message": "Nesaglabāts melnraksts"
+  },
+  "discardConfirm": {
+    "message": "Atmest šo taimeri? Laika ieraksts netiks izveidots."
+  },
+  "confirmed": {
+    "message": "Taimera darbība apstiprināta."
+  },
+  "conflict": {
+    "message": "Taimeris ir mainījies. Atsvaidziniet un pārbaudiet pašreizējo stāvokli."
+  },
+  "expiredAction": {
+    "message": "Darbības termiņš ir beidzies. Pirms jaunas darbības pārbaudiet taimeri."
+  },
+  "longTimer": {
+    "message": "Reģistrētas vairāk nekā 24 stundas. Pārbaudiet ierakstu Fin3000."
+  },
+  "updateRequired": {
+    "message": "Pirms turpināšanas atjauniniet paplašinājumu."
+  },
+  "storageError": {
+    "message": "Lokālā krātuve nav pieejama. Atveriet paplašinājumu vēlreiz."
+  },
+  "rateLimited": {
+    "message": "Uzgaidiet un atsvaidziniet stāvokli vēlāk."
+  },
+  "connectAgain": {
+    "message": "Savienojiet paplašinājumu vēlreiz. Aktīvs taimeris turpina darboties."
+  },
+  "captureReady": {
+    "message": "Izvēlētais teksts ir gatavs. Pārbaudiet personu un apzināti sāciet."
+  },
+  "disconnected": {
+    "message": "Atvienots. Aktīvs taimeris turpina darboties."
+  },
+  "stale": {
+    "message": "Stāvoklis vēl nav apstiprināts"
+  },
+  "synced": {
+    "message": "Atjaunināts"
+  },
+  "timeTracking": {
+    "message": "Laika uzskaite"
+  },
+  "description": {
+    "message": "Apraksts"
+  },
+  "descriptionPlaceholder": {
+    "message": "Pie kā tu strādā?"
+  },
+  "noProject": {
+    "message": "Bez projekta"
+  },
+  "untitled": {
+    "message": "Bez apraksta"
+  },
+  "start": {
+    "message": "Sākt taimeri"
+  },
+  "stop": {
+    "message": "Apturēt taimeri"
+  },
+  "save": {
+    "message": "Saglabāt"
+  },
+  "discard": {
+    "message": "Atmest taimeri"
+  },
+  "client": {
+    "message": "Klients · Filtrs"
+  },
+  "project": {
+    "message": "Projekts"
+  },
+  "task": {
+    "message": "Uzdevums"
+  },
+  "billable": {
+    "message": "Norēķināms"
+  },
+  "searchClients": {
+    "message": "Meklēt klientu…"
+  },
+  "searchProjects": {
+    "message": "Meklēt..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Nākamā"
+  },
+  "refresh": {
+    "message": "Atjaunināt"
+  },
+  "dropDraft": {
+    "message": "Dzēst"
+  },
+  "archived": {
+    "message": "Neaktīvs"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Savienot ar Fin3000"
+  },
+  "disconnect": {
+    "message": "Atvienot"
+  },
+  "connecting": {
+    "message": "Tiek atvērts savienojums ar Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Savienošana tika atcelta."
+  },
+  "checking": {
+    "message": "Saņemšana tiek pārbaudīta. Nesūtiet vēlreiz."
+  },
+  "busy": {
+    "message": "Lūdzu, uzgaidiet …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Sāciet un apturiet laiku pārlūkā un piesaistiet to klientiem un projektiem."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Sākt taimeri"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Piekļuve liegta"
+  },
+  "configuration": {
+    "message": "Pirms turpināšanas atjauniniet paplašinājumu."
+  },
+  "serverError": {
+    "message": "Radās neparedzēta kļūda"
+  },
+  "invalidInput": {
+    "message": "Nederīga vērtība"
+  },
+  "refreshFirst": {
+    "message": "Stāvoklis vēl nav apstiprināts"
+  },
+  "connectForCapture": {
+    "message": "Savienot laika uzskaiti"
+  },
+  "stopQueued": {
+    "message": "Apturēt taimeri · Lūdzu, uzgaidiet …"
+  },
+  "noResults": {
+    "message": "Nav rezultātu"
+  },
+  "loading": {
+    "message": "Ielādē..."
+  },
+  "clearSelection": {
+    "message": "Noņemt atlasi"
+  }
+}

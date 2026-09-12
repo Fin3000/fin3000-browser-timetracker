@@ -1,0 +1,200 @@
+{
+  "connectTitle": {
+    "message": "Prijungti laiko apskaitą"
+  },
+  "connectBody": {
+    "message": "Pradėkite ir sustabdykite laiką naršyklėje bei priskirkite jį klientams ir projektams."
+  },
+  "verifiedNotice": {
+    "message": "Oficialus „Fin3000“ plėtinys siunčia pasirinkto elemento tekstą kaip aprašymą. Jis skaito tik jūsų laikmatį ir leidžiamus klientus bei projektus."
+  },
+  "scope": {
+    "message": "Savo laiko skaitymas, pradėjimas, redagavimas, sustabdymas ir atmetimas"
+  },
+  "permissionDenied": {
+    "message": "Neturite reikiamo leidimo laiko apskaitai."
+  },
+  "running": {
+    "message": "Laikmatis veikia"
+  },
+  "idle": {
+    "message": "Nėra veikiančio laikmačio"
+  },
+  "manualCapture": {
+    "message": "Šio elemento negalima paimti. Įveskite aprašymą rankiniu būdu."
+  },
+  "dirtyStop": {
+    "message": "Sustabdymas įrašo išsaugotas reikšmes. Neišsaugoti pakeitimai lieka juodraščiu."
+  },
+  "taskCleared": {
+    "message": "Pakeitus projektą pašalinama ankstesnė užduotis."
+  },
+  "recoveryTitle": {
+    "message": "Neišsaugotas juodraštis"
+  },
+  "discardConfirm": {
+    "message": "Atmesti šį laikmatį? Laiko įrašas nebus sukurtas."
+  },
+  "confirmed": {
+    "message": "Laikmačio veiksmas patvirtintas."
+  },
+  "conflict": {
+    "message": "Laikmatis pasikeitė. Atnaujinkite ir patikrinkite dabartinę būseną."
+  },
+  "expiredAction": {
+    "message": "Veiksmo galiojimas baigėsi. Prieš naują veiksmą patikrinkite laikmatį."
+  },
+  "longTimer": {
+    "message": "Užregistruota daugiau nei 24 valandos. Patikrinkite įrašą „Fin3000“."
+  },
+  "updateRequired": {
+    "message": "Prieš tęsdami atnaujinkite plėtinį."
+  },
+  "storageError": {
+    "message": "Vietinė saugykla nepasiekiama. Atidarykite plėtinį iš naujo."
+  },
+  "rateLimited": {
+    "message": "Palaukite ir atnaujinkite būseną vėliau."
+  },
+  "connectAgain": {
+    "message": "Prijunkite plėtinį iš naujo. Veikiantis laikmatis toliau veikia."
+  },
+  "captureReady": {
+    "message": "Pasirinktas tekstas paruoštas. Patikrinkite asmenį ir sąmoningai pradėkite."
+  },
+  "disconnected": {
+    "message": "Atjungta. Veikiantis laikmatis toliau veikia."
+  },
+  "stale": {
+    "message": "Būsena dar nepatvirtinta"
+  },
+  "synced": {
+    "message": "Atnaujinta"
+  },
+  "timeTracking": {
+    "message": "Laiko apskaita"
+  },
+  "description": {
+    "message": "Aprašymas"
+  },
+  "descriptionPlaceholder": {
+    "message": "Prie ko dirbate?"
+  },
+  "noProject": {
+    "message": "Be projekto"
+  },
+  "untitled": {
+    "message": "Be aprašymo"
+  },
+  "start": {
+    "message": "Paleisti laikmatį"
+  },
+  "stop": {
+    "message": "Stabdyti laikmatį"
+  },
+  "save": {
+    "message": "Įrašyti"
+  },
+  "discard": {
+    "message": "Atmesti laikmatį"
+  },
+  "client": {
+    "message": "Klientas · Filtras"
+  },
+  "project": {
+    "message": "Projektas"
+  },
+  "task": {
+    "message": "Užduotis"
+  },
+  "billable": {
+    "message": "Apmokestinama"
+  },
+  "searchClients": {
+    "message": "Ieškoti kliento…"
+  },
+  "searchProjects": {
+    "message": "Ieškoti..."
+  },
+  "allClients": {
+    "message": "All clients"
+  },
+  "more": {
+    "message": "Kitas"
+  },
+  "refresh": {
+    "message": "Atnaujinti"
+  },
+  "dropDraft": {
+    "message": "Ištrinti"
+  },
+  "archived": {
+    "message": "Neaktyvus"
+  },
+  "pickerError": {
+    "message": "Suggestions could not be loaded."
+  },
+  "offline": {
+    "message": "Offline"
+  },
+  "connect": {
+    "message": "Prisijungti prie Fin3000"
+  },
+  "disconnect": {
+    "message": "Atsijungti"
+  },
+  "connecting": {
+    "message": "Atveriamas ryšys su Fin3000 …"
+  },
+  "connectionCancelled": {
+    "message": "Prisijungimas atšauktas."
+  },
+  "checking": {
+    "message": "Gavimas tikrinamas. Nesiųskite dar kartą."
+  },
+  "busy": {
+    "message": "Palaukite …"
+  },
+  "extensionName": {
+    "message": "Fin3000"
+  },
+  "extensionDescription": {
+    "message": "Pradėkite ir sustabdykite laiką naršyklėje bei priskirkite jį klientams ir projektams."
+  },
+  "menuStart": {
+    "message": "Fin3000 · Paleisti laikmatį"
+  },
+  "openApp": {
+    "message": "Fin3000 ↗"
+  },
+  "restricted": {
+    "message": "Prieiga uždrausta"
+  },
+  "configuration": {
+    "message": "Prieš tęsdami atnaujinkite plėtinį."
+  },
+  "serverError": {
+    "message": "Įvyko netikėta klaida"
+  },
+  "invalidInput": {
+    "message": "Netinkama reikšmė"
+  },
+  "refreshFirst": {
+    "message": "Būsena dar nepatvirtinta"
+  },
+  "connectForCapture": {
+    "message": "Prijungti laiko apskaitą"
+  },
+  "stopQueued": {
+    "message": "Stabdyti laikmatį · Palaukite …"
+  },
+  "noResults": {
+    "message": "Rezultatų nėra"
+  },
+  "loading": {
+    "message": "Įkeliama..."
+  },
+  "clearSelection": {
+    "message": "Panaikinti pasirinkimą"
+  }
+}
