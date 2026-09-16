@@ -1,0 +1,14 @@
+Fin3000 logo and favicon: existing Fin3000 brand artwork.
+The Fin3000 trademark is not licensed under Apache-2.0.
+
+Platform logos identify the operating system or browser supported by this tool.
+They do not imply endorsement, sponsorship, or a partnership with Fin3000.
+Assets are self-hosted and retained without changes to their artwork.
+
+firefox.svg, edge.svg
+Source: https://github.com/alrra/browser-logos
+Revision: 58881b84c4d73adc03c06fa2c275a7abee02d935
+Paths: src/firefox/firefox.svg, src/edge/edge.svg
+The source project states: "All logos and trademarks are the property of
+their respective owners." The project MIT license does not cover the logos.
+Firefox belongs to Mozilla, and Microsoft Edge to Microsoft.
