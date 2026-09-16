@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+- Add a German project page with Fin3000 branding, product-specific search
+  metadata, installation guidance and links to Fin3000.com. Include a
+  self-contained Tailwind documentation build and branded README navigation.
+
 ### Changed
 
 - Clarify the product description, installation status and Firefox/Edge developer setup.
